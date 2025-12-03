@@ -137,48 +137,118 @@ const StateDetail: React.FC<StateDetailProps> = ({ analysis, isLoading, onBack }
         </div>
       </div>
 
-      {/* Fastest Growing Cities */}
+      {/* Fastest Growing Cities - Ranking Cards */}
       {analysis.fastestGrowingCities && analysis.fastestGrowingCities.length > 0 && (
-        <div className="mt-6 bg-gradient-to-br from-emerald-900/30 via-yellow-900/10 to-slate-900/40 backdrop-blur-xl border border-emerald-500/30 rounded-2xl p-6 shadow-[0_8px_32px_0_rgba(16,185,129,0.2)] animate-fadeInUp animation-delay-300">
-          <h3 className="text-lg font-semibold mb-4 flex items-center">
+        <div className="mt-6 bg-gradient-to-br from-emerald-900/30 via-yellow-900/10 to-slate-900/40 backdrop-blur-xl border border-emerald-500/30 rounded-2xl p-8 shadow-[0_8px_32px_0_rgba(16,185,129,0.2)] animate-fadeInUp animation-delay-300">
+          <h3 className="text-lg font-semibold mb-6 flex items-center">
             <TrendingUp className="w-5 h-5 mr-2 text-emerald-400 animate-float" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500">Fastest Growing Cities</span>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+          {/* Ranking Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {analysis.fastestGrowingCities.map((city, idx) => {
-              // Extract percentage number from growth rate string (e.g., "26% YoY" -> 26)
               const growthPercent = parseFloat(city.growthRate.replace(/[^0-9.]/g, '')) || 0;
-              const maxGrowth = 30; // Assume max 30% for bar chart scaling
+              const maxGrowth = 40;
               const barWidth = Math.min((growthPercent / maxGrowth) * 100, 100);
+
+              // Ranking colors and icons
+              const rankings = [
+                {
+                  icon: '🏆',
+                  label: '1st Place',
+                  borderColor: 'border-yellow-500/50',
+                  shadowColor: 'shadow-[0_8px_32px_0_rgba(234,179,8,0.3)]',
+                  hoverShadow: 'hover:shadow-[0_12px_48px_0_rgba(234,179,8,0.5)]',
+                  badgeBg: 'bg-gradient-to-br from-yellow-500 to-yellow-600',
+                  scale: 'md:scale-105'
+                },
+                {
+                  icon: '🥈',
+                  label: '2nd Place',
+                  borderColor: 'border-slate-400/40',
+                  shadowColor: 'shadow-[0_8px_32px_0_rgba(148,163,184,0.2)]',
+                  hoverShadow: 'hover:shadow-[0_12px_48px_0_rgba(148,163,184,0.4)]',
+                  badgeBg: 'bg-gradient-to-br from-slate-400 to-slate-500',
+                  scale: ''
+                },
+                {
+                  icon: '🥉',
+                  label: '3rd Place',
+                  borderColor: 'border-orange-600/40',
+                  shadowColor: 'shadow-[0_8px_32px_0_rgba(234,88,12,0.2)]',
+                  hoverShadow: 'hover:shadow-[0_12px_48px_0_rgba(234,88,12,0.4)]',
+                  badgeBg: 'bg-gradient-to-br from-orange-600 to-orange-700',
+                  scale: ''
+                }
+              ];
+
+              const rank = rankings[idx] || rankings[2];
 
               return (
                 <div
                   key={idx}
-                  className="bg-slate-950/50 backdrop-blur-sm rounded-xl p-4 border border-emerald-500/20 hover:border-yellow-500/40 hover:shadow-[0_8px_24px_0_rgba(217,119,6,0.3)] transition-all duration-300 hover:scale-105 group"
+                  className={`relative bg-slate-950/60 backdrop-blur-xl border-2 ${rank.borderColor} rounded-2xl p-6 ${rank.shadowColor} ${rank.hoverShadow} hover:scale-105 hover:-translate-y-2 transition-all duration-500 group animate-scaleIn ${rank.scale}`}
                   style={{ animationDelay: `${idx * 150}ms` }}
                 >
-                  <h4 className="text-white font-bold mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-yellow-500 transition-all">
-                    {city.name}
-                  </h4>
+                  {/* Ranking Badge */}
+                  <div className="absolute -top-4 -right-4 w-16 h-16 flex items-center justify-center">
+                    <div className={`absolute inset-0 ${rank.badgeBg} rounded-full shadow-2xl group-hover:scale-110 transition-transform duration-300`}></div>
+                    <div className="relative z-10 flex flex-col items-center">
+                      <span className="text-2xl">{rank.icon}</span>
+                    </div>
+                  </div>
 
-                  {/* Growth Rate with Mini Bar Chart */}
-                  <div className="mb-3">
-                    <div className="flex items-baseline mb-1">
-                      <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500">
+                  {/* Ranking Number */}
+                  <div className="absolute -top-3 -left-3 w-12 h-12 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-yellow-500 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300"></div>
+                    <span className="relative z-10 text-white font-bold text-xl">#{idx + 1}</span>
+                  </div>
+
+                  {/* City Name */}
+                  <div className="mt-6 mb-4">
+                    <h4 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-yellow-500 transition-all duration-300 mb-2">
+                      {city.name}
+                    </h4>
+                    <span className="text-xs text-slate-400 font-medium uppercase tracking-wider">{rank.label}</span>
+                  </div>
+
+                  {/* Growth Rate Display */}
+                  <div className="mb-4">
+                    <div className="flex items-baseline mb-2">
+                      <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500">
                         {city.growthRate}
                       </span>
-                      <span className="text-xs text-slate-400 ml-1">growth</span>
+                      <span className="text-sm text-slate-400 ml-2">growth</span>
                     </div>
-                    {/* Horizontal Bar Chart */}
-                    <div className="w-full h-2 bg-slate-800/50 rounded-full overflow-hidden">
+
+                    {/* Progress Bar */}
+                    <div className="relative w-full h-3 bg-slate-800/60 rounded-full overflow-hidden border border-slate-700/50">
                       <div
-                        className="h-full bg-gradient-to-r from-emerald-500 to-yellow-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+                        className="absolute inset-0 bg-gradient-to-r from-emerald-500 via-emerald-400 to-yellow-500 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.6)] transition-all duration-1000 ease-out"
                         style={{ width: `${barWidth}%` }}
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/20"></div>
+                      </div>
+                      {/* Percentage marker */}
+                      <div
+                        className="absolute top-1/2 -translate-y-1/2 w-1 h-5 bg-white shadow-lg transition-all duration-1000"
+                        style={{ left: `${barWidth}%` }}
                       ></div>
                     </div>
                   </div>
 
-                  <p className="text-xs text-white leading-relaxed">{city.reason}</p>
+                  {/* Growth Reason */}
+                  <div className="pt-4 border-t border-slate-700/50">
+                    <p className="text-sm text-slate-300 leading-relaxed">
+                      {city.reason}
+                    </p>
+                  </div>
+
+                  {/* Decorative corner accent */}
+                  <div className="absolute bottom-0 right-0 w-20 h-20 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-tl from-emerald-500 to-transparent rounded-tl-full"></div>
+                  </div>
                 </div>
               );
             })}
@@ -186,50 +256,100 @@ const StateDetail: React.FC<StateDetailProps> = ({ analysis, isLoading, onBack }
         </div>
       )}
 
-      {/* Cities Grid */}
-      <h3 className="text-xl font-bold mt-8 mb-4">
+      {/* Top Investment Hotspots - Hexagonal Cards */}
+      <h3 className="text-xl font-bold mt-8 mb-6">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-yellow-500 to-emerald-600">
           Top Investment Hotspots
         </span>
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {analysis.topCities.map((city, idx) => (
-          <div
-            key={idx}
-            className="bg-slate-900/40 backdrop-blur-xl border border-emerald-500/20 rounded-xl p-5 hover:border-yellow-500/40 hover:shadow-[0_12px_32px_0_rgba(217,119,6,0.3)] transition-all duration-300 hover:scale-105 hover:-translate-y-1 group animate-scaleIn"
-            style={{ animationDelay: `${idx * 100}ms` }}
-          >
-            <div className="flex justify-between items-center mb-3">
-              <h4 className="text-lg font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-yellow-500 transition-all">
-                {city.name}
-              </h4>
-              <span className={`text-xs px-2 py-1 rounded-lg font-medium backdrop-blur-sm ${
-                city.tier === 'Tier 1' ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30' :
-                city.tier === 'Tier 2' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' :
-                'bg-slate-700/50 text-slate-300 border border-slate-600/30'
-              }`}>
-                {city.tier}
-              </span>
-            </div>
 
-            <div className="flex items-baseline mb-3">
-              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500">
-                {city.avgPriceSqFt}
-              </span>
-              <span className="text-xs text-slate-400 ml-1">/ sq.ft avg</span>
-            </div>
+      {/* Hexagonal Grid Container */}
+      <div className="relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-20">
+          {analysis.topCities.map((city, idx) => (
+            <div
+              key={idx}
+              className={`relative mx-auto w-full max-w-xs aspect-square group animate-scaleIn ${
+                idx % 2 === 1 ? 'md:mt-12' : ''
+              }`}
+              style={{
+                animationDelay: `${idx * 150}ms`
+              }}
+            >
+              {/* Hexagon Container */}
+              <div
+                className="absolute inset-0 transition-all duration-500 hover:scale-110 hover:rotate-2"
+                style={{
+                  clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+                }}
+              >
+                {/* Background with gradient border effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 via-yellow-500 to-emerald-600 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-            <p className="text-sm text-white mb-4 h-10 overflow-hidden leading-relaxed">{city.description}</p>
+                {/* Inner content area */}
+                <div
+                  className="absolute inset-[3px] bg-slate-900/95 backdrop-blur-xl"
+                  style={{
+                    clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+                  }}
+                >
+                  {/* Content */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+                    {/* Tier Badge */}
+                    <div className="mb-3">
+                      <span className={`text-xs px-3 py-1.5 rounded-full font-semibold backdrop-blur-sm ${
+                        city.tier === 'Tier 1' ? 'bg-purple-500/30 text-purple-300 border border-purple-500/50 shadow-lg shadow-purple-500/30' :
+                        city.tier === 'Tier 2' ? 'bg-blue-500/30 text-blue-300 border border-blue-500/50 shadow-lg shadow-blue-500/30' :
+                        'bg-slate-700/50 text-slate-300 border border-slate-600/50'
+                      }`}>
+                        {city.tier}
+                      </span>
+                    </div>
 
-            <div className="flex items-center text-xs font-medium text-white">
-              <div className={`h-2 w-2 rounded-full mr-2 ${
-                city.growthPotential === 'High' ? 'bg-emerald-500 animate-pulse shadow-lg shadow-emerald-500/50' :
-                'bg-yellow-500 shadow-lg shadow-yellow-500/50'
-              }`}></div>
-              {city.growthPotential} Growth Potential
+                    {/* City Name */}
+                    <h4 className="text-xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-yellow-500 transition-all duration-300">
+                      {city.name}
+                    </h4>
+
+                    {/* Price */}
+                    <div className="mb-4">
+                      <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500 mb-1">
+                        {city.avgPriceSqFt}
+                      </div>
+                      <div className="text-xs text-slate-400">per sq.ft average</div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-xs text-slate-300 mb-4 line-clamp-3 leading-relaxed px-2">
+                      {city.description}
+                    </p>
+
+                    {/* Growth Potential */}
+                    <div className="flex items-center text-xs font-medium text-white">
+                      <div className={`h-2.5 w-2.5 rounded-full mr-2 ${
+                        city.growthPotential === 'High' ? 'bg-emerald-500 animate-pulse shadow-lg shadow-emerald-500/70' :
+                        'bg-yellow-500 animate-pulse shadow-lg shadow-yellow-500/70'
+                      }`}></div>
+                      {city.growthPotential} Growth
+                    </div>
+                  </div>
+                </div>
+
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl bg-gradient-to-br from-emerald-500/30 via-yellow-500/30 to-emerald-600/30"
+                  style={{
+                    clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+                  }}
+                ></div>
+              </div>
+
+              {/* Decorative corner accents */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 w-12 h-12 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="w-full h-full border-t-2 border-l-2 border-emerald-400 transform rotate-45 animate-pulse"></div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

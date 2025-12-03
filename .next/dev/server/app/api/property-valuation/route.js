@@ -1,0 +1,11 @@
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/property-valuation/route.js")
+R.c("server/chunks/[root-of-the-server]__b34c330c._.js")
+R.c("server/chunks/2c7fa_next_24d48ac8._.js")
+R.c("server/chunks/2c7fa_google-auth-library_759cf86d._.js")
+R.c("server/chunks/2c7fa_ws_d3376a89._.js")
+R.c("server/chunks/2c7fa_@google_genai_dist_node_index_mjs_0a9c7331._.js")
+R.c("server/chunks/2c7fa_5d584e38._.js")
+R.c("server/chunks/[root-of-the-server]__b5f31e0e._.js")
+R.c("server/chunks/2776d__next-internal_server_app_api_property-valuation_route_actions_2ff16a4d.js")
+R.m("[project]/Desktop/2025/EstateIQIndia/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Desktop/2025/EstateIQIndia/app/api/property-valuation/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/Desktop/2025/EstateIQIndia/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Desktop/2025/EstateIQIndia/app/api/property-valuation/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

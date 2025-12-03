@@ -1,0 +1,238 @@
+'use client';
+
+import React from 'react';
+import { ArrowLeft, Building, TrendingUp, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { StateAnalysis } from '../types';
+
+interface StateDetailProps {
+  analysis: StateAnalysis;
+  isLoading: boolean;
+  onBack: () => void;
+}
+
+const StateDetail: React.FC<StateDetailProps> = ({ analysis, isLoading, onBack }) => {
+  if (isLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center h-96 w-full">
+        <div className="relative">
+          <div className="h-16 w-16 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+          <div className="absolute inset-0 h-16 w-16 border-4 border-yellow-500/30 rounded-full animate-ping"></div>
+        </div>
+        <p className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500 text-lg font-medium animate-pulse">Gathering real-time market intelligence...</p>
+        <p className="text-slate-400 text-sm mt-2">Connecting to Gemini Pro & Google Search</p>
+      </div>
+    );
+  }
+
+  // SVG Circular Progress Chart for Investment Score
+  const CircularProgress = ({ score }: { score: number }) => {
+    const radius = 54;
+    const circumference = 2 * Math.PI * radius;
+    const progress = (score / 100) * circumference;
+    const remaining = circumference - progress;
+
+    return (
+      <div className="relative w-32 h-32 animate-scaleIn">
+        <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 120 120">
+          {/* Background Circle */}
+          <circle
+            cx="60"
+            cy="60"
+            r={radius}
+            stroke="rgba(71, 85, 105, 0.3)"
+            strokeWidth="8"
+            fill="none"
+          />
+          {/* Progress Circle */}
+          <circle
+            cx="60"
+            cy="60"
+            r={radius}
+            stroke="url(#scoreGradient)"
+            strokeWidth="8"
+            fill="none"
+            strokeDasharray={`${progress} ${remaining}`}
+            strokeLinecap="round"
+            className="transition-all duration-1000 ease-out"
+            style={{
+              filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 0.6))'
+            }}
+          />
+          <defs>
+            <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#10b981" />
+              <stop offset="50%" stopColor="#fbbf24" />
+              <stop offset="100%" stopColor="#f59e0b" />
+            </linearGradient>
+          </defs>
+        </svg>
+        {/* Score Text */}
+        <div className="absolute inset-0 flex items-center justify-center flex-col">
+          <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-emerald-400 to-yellow-500">
+            {score}
+          </span>
+          <span className="text-xs text-slate-400 font-medium">/ 100</span>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="space-y-6 animate-fadeInUp">
+      <button
+        onClick={onBack}
+        className="flex items-center text-slate-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-emerald-400 hover:to-yellow-500 transition-all duration-300 mb-2 group"
+      >
+        <ArrowLeft className="w-4 h-4 mr-2 group-hover:translate-x-[-4px] transition-transform" /> Back to Map
+      </button>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Header Card */}
+        <div className="lg:col-span-2 bg-slate-900/40 backdrop-blur-xl rounded-2xl p-6 border border-emerald-500/20 shadow-[0_8px_32px_0_rgba(16,185,129,0.15)] hover:shadow-[0_12px_48px_0_rgba(217,119,6,0.25)] transition-all duration-500 hover:scale-[1.01] animate-scaleIn">
+          <div className="flex justify-between items-start mb-4 gap-4">
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold mb-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-yellow-500 to-emerald-600">
+                  {analysis.stateName}
+                </span>
+              </h2>
+              <p className="text-white leading-relaxed">{analysis.summary}</p>
+            </div>
+            <CircularProgress score={analysis.investmentScore} />
+          </div>
+
+          <div className="mt-6">
+            <h3 className="text-lg font-semibold mb-3 flex items-center">
+              <TrendingUp className="w-5 h-5 mr-2 text-emerald-400" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500">Market Trends</span>
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {analysis.marketTrends.map((trend, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1.5 bg-slate-800/50 backdrop-blur-sm border border-emerald-500/20 rounded-full text-sm text-white hover:bg-emerald-500/10 hover:border-emerald-500/40 hover:scale-105 transition-all duration-300 cursor-default shadow-lg"
+                  style={{ animationDelay: `${i * 100}ms` }}
+                >
+                  {trend}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Infrastructure Card */}
+        <div className="bg-slate-900/40 backdrop-blur-xl rounded-2xl p-6 border border-yellow-500/20 shadow-[0_8px_32px_0_rgba(217,119,6,0.15)] hover:shadow-[0_12px_48px_0_rgba(16,185,129,0.25)] transition-all duration-500 hover:scale-[1.01] animate-scaleIn animation-delay-200">
+           <h3 className="text-lg font-semibold mb-4 flex items-center">
+            <Building className="w-5 h-5 mr-2 text-yellow-400" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-emerald-400">Infrastructure</span>
+          </h3>
+          <ul className="space-y-3">
+            {analysis.infrastructureProjects.map((proj, i) => (
+              <li key={i} className="flex items-start group hover:translate-x-1 transition-transform duration-200">
+                <CheckCircle2 className="w-4 h-4 text-yellow-500 mr-2 mt-1 shrink-0 group-hover:text-emerald-400 transition-colors" />
+                <span className="text-sm text-white">{proj}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Fastest Growing Cities */}
+      {analysis.fastestGrowingCities && analysis.fastestGrowingCities.length > 0 && (
+        <div className="mt-6 bg-gradient-to-br from-emerald-900/30 via-yellow-900/10 to-slate-900/40 backdrop-blur-xl border border-emerald-500/30 rounded-2xl p-6 shadow-[0_8px_32px_0_rgba(16,185,129,0.2)] animate-fadeInUp animation-delay-300">
+          <h3 className="text-lg font-semibold mb-4 flex items-center">
+            <TrendingUp className="w-5 h-5 mr-2 text-emerald-400 animate-float" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500">Fastest Growing Cities</span>
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {analysis.fastestGrowingCities.map((city, idx) => {
+              // Extract percentage number from growth rate string (e.g., "26% YoY" -> 26)
+              const growthPercent = parseFloat(city.growthRate.replace(/[^0-9.]/g, '')) || 0;
+              const maxGrowth = 30; // Assume max 30% for bar chart scaling
+              const barWidth = Math.min((growthPercent / maxGrowth) * 100, 100);
+
+              return (
+                <div
+                  key={idx}
+                  className="bg-slate-950/50 backdrop-blur-sm rounded-xl p-4 border border-emerald-500/20 hover:border-yellow-500/40 hover:shadow-[0_8px_24px_0_rgba(217,119,6,0.3)] transition-all duration-300 hover:scale-105 group"
+                  style={{ animationDelay: `${idx * 150}ms` }}
+                >
+                  <h4 className="text-white font-bold mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-yellow-500 transition-all">
+                    {city.name}
+                  </h4>
+
+                  {/* Growth Rate with Mini Bar Chart */}
+                  <div className="mb-3">
+                    <div className="flex items-baseline mb-1">
+                      <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500">
+                        {city.growthRate}
+                      </span>
+                      <span className="text-xs text-slate-400 ml-1">growth</span>
+                    </div>
+                    {/* Horizontal Bar Chart */}
+                    <div className="w-full h-2 bg-slate-800/50 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-emerald-500 to-yellow-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+                        style={{ width: `${barWidth}%` }}
+                      ></div>
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-white leading-relaxed">{city.reason}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Cities Grid */}
+      <h3 className="text-xl font-bold mt-8 mb-4">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-yellow-500 to-emerald-600">
+          Top Investment Hotspots
+        </span>
+      </h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {analysis.topCities.map((city, idx) => (
+          <div
+            key={idx}
+            className="bg-slate-900/40 backdrop-blur-xl border border-emerald-500/20 rounded-xl p-5 hover:border-yellow-500/40 hover:shadow-[0_12px_32px_0_rgba(217,119,6,0.3)] transition-all duration-300 hover:scale-105 hover:-translate-y-1 group animate-scaleIn"
+            style={{ animationDelay: `${idx * 100}ms` }}
+          >
+            <div className="flex justify-between items-center mb-3">
+              <h4 className="text-lg font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-yellow-500 transition-all">
+                {city.name}
+              </h4>
+              <span className={`text-xs px-2 py-1 rounded-lg font-medium backdrop-blur-sm ${
+                city.tier === 'Tier 1' ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30' :
+                city.tier === 'Tier 2' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' :
+                'bg-slate-700/50 text-slate-300 border border-slate-600/30'
+              }`}>
+                {city.tier}
+              </span>
+            </div>
+
+            <div className="flex items-baseline mb-3">
+              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-yellow-500">
+                {city.avgPriceSqFt}
+              </span>
+              <span className="text-xs text-slate-400 ml-1">/ sq.ft avg</span>
+            </div>
+
+            <p className="text-sm text-white mb-4 h-10 overflow-hidden leading-relaxed">{city.description}</p>
+
+            <div className="flex items-center text-xs font-medium text-white">
+              <div className={`h-2 w-2 rounded-full mr-2 ${
+                city.growthPotential === 'High' ? 'bg-emerald-500 animate-pulse shadow-lg shadow-emerald-500/50' :
+                'bg-yellow-500 shadow-lg shadow-yellow-500/50'
+              }`}></div>
+              {city.growthPotential} Growth Potential
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default StateDetail;

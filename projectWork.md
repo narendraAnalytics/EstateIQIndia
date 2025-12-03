@@ -1,0 +1,3 @@
+I want to create a app for India Real-Estate Investment Heatmap Goal: Help users find best places to invest in property across states/cities. and Suggest expected price of any plot/flat based on live surroundings & history. so by using the latest model gemini-3-pro-preview [enabled google search] , and google maps also . I want a nice design want a indian map so hover shows the states and when clcik gosub details of the state with the cities , 2 tier , 3 tier info of cities of the states also.
+
+use model :gemini-3-pro-preview [enabled google search] , use google maps for loctaion

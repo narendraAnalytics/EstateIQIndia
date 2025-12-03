@@ -1,0 +1,7 @@
+{
+  "name": "EstateIQ India",
+  "description": "AI-powered real estate investment heatmap and property valuation tool for India, utilizing Gemini 1.5 Pro with Google Search and Maps grounding.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

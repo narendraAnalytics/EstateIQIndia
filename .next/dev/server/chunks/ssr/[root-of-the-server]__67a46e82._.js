@@ -906,6 +906,175 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                 lineNumber: 82,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
+            analysis.executiveSummary && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mb-6 bg-gradient-to-br from-emerald-900/30 via-slate-900/40 to-yellow-900/30 backdrop-blur-xl border border-emerald-500/30 rounded-2xl p-8 shadow-[0_8px_32px_0_rgba(16,185,129,0.2)] animate-fadeInUp",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        className: "text-2xl font-bold mb-6 flex items-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-yellow-500 to-emerald-600",
+                            children: "Executive Summary"
+                        }, void 0, false, {
+                            fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                            lineNumber: 93,
+                            columnNumber: 13
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                        lineNumber: 92,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid grid-cols-1 md:grid-cols-2 gap-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-slate-950/60 backdrop-blur-sm border border-emerald-500/20 rounded-xl p-5 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        className: "text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3 flex items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                                lineNumber: 102,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            "Overview"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 101,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-white leading-relaxed text-sm",
+                                        children: analysis.executiveSummary.overview
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 105,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                lineNumber: 100,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-slate-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-xl p-5 hover:border-yellow-500/40 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        className: "text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-3 flex items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                                lineNumber: 111,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            "Political Factors"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 110,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-white leading-relaxed text-sm",
+                                        children: analysis.executiveSummary.politicalFactors
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 114,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                lineNumber: 109,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-slate-950/60 backdrop-blur-sm border border-emerald-500/20 rounded-xl p-5 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        className: "text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3 flex items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                                lineNumber: 120,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            "Economic Factors"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 119,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-white leading-relaxed text-sm",
+                                        children: analysis.executiveSummary.economicFactors
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 123,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                lineNumber: 118,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-slate-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-xl p-5 hover:border-yellow-500/40 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        className: "text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-3 flex items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                                lineNumber: 129,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            "Market Outlook"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 128,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-white leading-relaxed text-sm",
+                                        children: analysis.executiveSummary.marketOutlook
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 132,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                lineNumber: 127,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                        lineNumber: 98,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                lineNumber: 91,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 lg:grid-cols-3 gap-6",
                 children: [
@@ -925,12 +1094,12 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                     children: analysis.stateName
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                    lineNumber: 95,
+                                                    lineNumber: 144,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 94,
+                                                lineNumber: 143,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -938,26 +1107,26 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 children: analysis.summary
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 99,
+                                                lineNumber: 148,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 142,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(CircularProgress, {
                                         score: analysis.investmentScore
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 150,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                lineNumber: 92,
+                                lineNumber: 141,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -970,7 +1139,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 className: "w-5 h-5 mr-2 text-emerald-400"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 106,
+                                                lineNumber: 155,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -978,13 +1147,13 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 children: "Market Trends"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 156,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 154,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -997,24 +1166,24 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 children: trend
                                             }, i, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 111,
+                                                lineNumber: 160,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 158,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                lineNumber: 104,
+                                lineNumber: 153,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                        lineNumber: 91,
+                        lineNumber: 140,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1027,7 +1196,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                         className: "w-5 h-5 mr-2 text-yellow-400"
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 126,
+                                        lineNumber: 175,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1035,13 +1204,13 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                         children: "Infrastructure"
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 127,
+                                        lineNumber: 176,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                lineNumber: 125,
+                                lineNumber: 174,
                                 columnNumber: 12
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1053,7 +1222,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 className: "w-4 h-4 text-yellow-500 mr-2 mt-1 shrink-0 group-hover:text-emerald-400 transition-colors"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 132,
+                                                lineNumber: 181,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1061,30 +1230,30 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 children: proj
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 133,
+                                                lineNumber: 182,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, i, true, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 131,
+                                        lineNumber: 180,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                lineNumber: 129,
+                                lineNumber: 178,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                        lineNumber: 124,
+                        lineNumber: 173,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                lineNumber: 89,
+                lineNumber: 138,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             analysis.fastestGrowingCities && analysis.fastestGrowingCities.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1097,7 +1266,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                 className: "w-5 h-5 mr-2 text-emerald-400 animate-float"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                lineNumber: 144,
+                                lineNumber: 193,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1105,13 +1274,13 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                 children: "Fastest Growing Cities"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                lineNumber: 145,
+                                lineNumber: 194,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                        lineNumber: 143,
+                        lineNumber: 192,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1164,7 +1333,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 className: `absolute inset-0 ${rank.badgeBg} rounded-full shadow-2xl group-hover:scale-110 transition-transform duration-300`
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 196,
+                                                lineNumber: 245,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1174,18 +1343,18 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                     children: rank.icon
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                    lineNumber: 198,
+                                                    lineNumber: 247,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 197,
+                                                lineNumber: 246,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 195,
+                                        lineNumber: 244,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1195,7 +1364,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 className: "absolute inset-0 bg-gradient-to-br from-emerald-500 to-yellow-500 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 253,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1206,13 +1375,13 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 205,
+                                                lineNumber: 254,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 252,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1223,7 +1392,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 children: city.name
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 210,
+                                                lineNumber: 259,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1231,13 +1400,13 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                 children: rank.label
                                             }, void 0, false, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 262,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 209,
+                                        lineNumber: 258,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1251,7 +1420,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                         children: city.growthRate
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                        lineNumber: 219,
+                                                        lineNumber: 268,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1259,13 +1428,13 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                         children: "growth"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                        lineNumber: 222,
+                                                        lineNumber: 271,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 218,
+                                                lineNumber: 267,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1280,12 +1449,12 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                             className: "absolute inset-0 bg-gradient-to-t from-transparent to-white/20"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                            lineNumber: 231,
+                                                            lineNumber: 280,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                        lineNumber: 227,
+                                                        lineNumber: 276,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1295,19 +1464,19 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                        lineNumber: 234,
+                                                        lineNumber: 283,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 226,
+                                                lineNumber: 275,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 217,
+                                        lineNumber: 266,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1317,12 +1486,12 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                             children: city.reason
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                            lineNumber: 243,
+                                            lineNumber: 292,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 242,
+                                        lineNumber: 291,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1331,30 +1500,123 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                             className: "absolute inset-0 bg-gradient-to-tl from-emerald-500 to-transparent rounded-tl-full"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                            lineNumber: 250,
+                                            lineNumber: 299,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 249,
+                                        lineNumber: 298,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, idx, true, {
                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                lineNumber: 189,
+                                lineNumber: 238,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0));
                         })
                     }, void 0, false, {
                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                        lineNumber: 149,
+                        lineNumber: 198,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                lineNumber: 142,
+                lineNumber: 191,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)),
+            analysis.latestNews && analysis.latestNews.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mt-8 mb-8 bg-gradient-to-br from-yellow-900/30 via-slate-900/40 to-emerald-900/30 backdrop-blur-xl border border-yellow-500/30 rounded-2xl p-8 shadow-[0_8px_32px_0_rgba(217,119,6,0.2)] animate-fadeInUp animation-delay-400",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        className: "text-2xl font-bold mb-6 flex items-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-emerald-400 to-yellow-600",
+                            children: "📰 Latest Real Estate News"
+                        }, void 0, false, {
+                            fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                            lineNumber: 312,
+                            columnNumber: 13
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                        lineNumber: 311,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "space-y-4",
+                        children: analysis.latestNews.map((news, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-slate-950/60 backdrop-blur-sm border-l-4 border-yellow-500/50 rounded-lg p-5 hover:bg-slate-900/70 hover:border-yellow-500 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 group animate-scaleIn",
+                                style: {
+                                    animationDelay: `${idx * 100}ms`
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                className: "text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-yellow-400 group-hover:to-emerald-400 transition-all duration-300 flex-1",
+                                                children: news.headline
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                                lineNumber: 325,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center gap-4 text-sm",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-yellow-400 font-medium whitespace-nowrap",
+                                                        children: news.date
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                                        lineNumber: 329,
+                                                        columnNumber: 21
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "px-3 py-1 bg-yellow-500/20 border border-yellow-500/30 rounded-full text-yellow-300 text-xs font-semibold whitespace-nowrap",
+                                                        children: news.source
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                                        lineNumber: 330,
+                                                        columnNumber: 21
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                                lineNumber: 328,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 324,
+                                        columnNumber: 17
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-slate-300 text-sm leading-relaxed",
+                                        children: news.summary
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                        lineNumber: 335,
+                                        columnNumber: 17
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, idx, true, {
+                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                                lineNumber: 319,
+                                columnNumber: 15
+                            }, ("TURBOPACK compile-time value", void 0)))
+                    }, void 0, false, {
+                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                        lineNumber: 317,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
+                lineNumber: 310,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1364,12 +1626,12 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                     children: "Top Investment Hotspots"
                 }, void 0, false, {
                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                    lineNumber: 261,
+                    lineNumber: 344,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                lineNumber: 260,
+                lineNumber: 343,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1392,7 +1654,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                             className: "absolute inset-0 bg-gradient-to-br from-emerald-500 via-yellow-500 to-emerald-600 opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                            lineNumber: 287,
+                                            lineNumber: 370,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1410,12 +1672,12 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                             children: city.tier
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                            lineNumber: 300,
+                                                            lineNumber: 383,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                        lineNumber: 299,
+                                                        lineNumber: 382,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1423,7 +1685,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                         children: city.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                        lineNumber: 310,
+                                                        lineNumber: 393,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1434,7 +1696,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                                 children: city.avgPriceSqFt
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                                lineNumber: 316,
+                                                                lineNumber: 399,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1442,13 +1704,13 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                                 children: "per sq.ft average"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                                lineNumber: 319,
+                                                                lineNumber: 402,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                        lineNumber: 315,
+                                                        lineNumber: 398,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1456,7 +1718,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                         children: city.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                        lineNumber: 323,
+                                                        lineNumber: 406,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1466,7 +1728,7 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                                 className: `h-2.5 w-2.5 rounded-full mr-2 ${city.growthPotential === 'High' ? 'bg-emerald-500 animate-pulse shadow-lg shadow-emerald-500/70' : 'bg-yellow-500 animate-pulse shadow-lg shadow-yellow-500/70'}`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                                lineNumber: 329,
+                                                                lineNumber: 412,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             city.growthPotential,
@@ -1474,18 +1736,18 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                        lineNumber: 328,
+                                                        lineNumber: 411,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                                lineNumber: 297,
+                                                lineNumber: 380,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                            lineNumber: 290,
+                                            lineNumber: 373,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1495,13 +1757,13 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                            lineNumber: 339,
+                                            lineNumber: 422,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                    lineNumber: 280,
+                                    lineNumber: 363,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1510,28 +1772,28 @@ const StateDetail = ({ analysis, isLoading, onBack })=>{
                                         className: "w-full h-full border-t-2 border-l-2 border-emerald-400 transform rotate-45 animate-pulse"
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                        lineNumber: 348,
+                                        lineNumber: 431,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                                    lineNumber: 347,
+                                    lineNumber: 430,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, idx, true, {
                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                            lineNumber: 270,
+                            lineNumber: 353,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                    lineNumber: 268,
+                    lineNumber: 351,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/StateDetail.tsx",
-                lineNumber: 267,
+                lineNumber: 350,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]

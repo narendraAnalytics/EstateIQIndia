@@ -86,6 +86,55 @@ const StateDetail: React.FC<StateDetailProps> = ({ analysis, isLoading, onBack }
         <ArrowLeft className="w-4 h-4 mr-2 group-hover:translate-x-[-4px] transition-transform" /> Back to Map
       </button>
 
+      {/* Executive Summary Section */}
+      {analysis.executiveSummary && (
+        <div className="mb-6 bg-gradient-to-br from-emerald-900/30 via-slate-900/40 to-yellow-900/30 backdrop-blur-xl border border-emerald-500/30 rounded-2xl p-8 shadow-[0_8px_32px_0_rgba(16,185,129,0.2)] animate-fadeInUp">
+          <h3 className="text-2xl font-bold mb-6 flex items-center">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-yellow-500 to-emerald-600">
+              Executive Summary
+            </span>
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Overview */}
+            <div className="bg-slate-950/60 backdrop-blur-sm border border-emerald-500/20 rounded-xl p-5 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300">
+              <h4 className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3 flex items-center">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
+                Overview
+              </h4>
+              <p className="text-white leading-relaxed text-sm">{analysis.executiveSummary.overview}</p>
+            </div>
+
+            {/* Political Factors */}
+            <div className="bg-slate-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-xl p-5 hover:border-yellow-500/40 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300">
+              <h4 className="text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-3 flex items-center">
+                <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"></span>
+                Political Factors
+              </h4>
+              <p className="text-white leading-relaxed text-sm">{analysis.executiveSummary.politicalFactors}</p>
+            </div>
+
+            {/* Economic Factors */}
+            <div className="bg-slate-950/60 backdrop-blur-sm border border-emerald-500/20 rounded-xl p-5 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300">
+              <h4 className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3 flex items-center">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
+                Economic Factors
+              </h4>
+              <p className="text-white leading-relaxed text-sm">{analysis.executiveSummary.economicFactors}</p>
+            </div>
+
+            {/* Market Outlook */}
+            <div className="bg-slate-950/60 backdrop-blur-sm border border-yellow-500/20 rounded-xl p-5 hover:border-yellow-500/40 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300">
+              <h4 className="text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-3 flex items-center">
+                <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"></span>
+                Market Outlook
+              </h4>
+              <p className="text-white leading-relaxed text-sm">{analysis.executiveSummary.marketOutlook}</p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Header Card */}
         <div className="lg:col-span-2 bg-slate-900/40 backdrop-blur-xl rounded-2xl p-6 border border-emerald-500/20 shadow-[0_8px_32px_0_rgba(16,185,129,0.15)] hover:shadow-[0_12px_48px_0_rgba(217,119,6,0.25)] transition-all duration-500 hover:scale-[1.01] animate-scaleIn">
@@ -252,6 +301,40 @@ const StateDetail: React.FC<StateDetailProps> = ({ analysis, isLoading, onBack }
                 </div>
               );
             })}
+          </div>
+        </div>
+      )}
+
+      {/* Latest News Section */}
+      {analysis.latestNews && analysis.latestNews.length > 0 && (
+        <div className="mt-8 mb-8 bg-gradient-to-br from-yellow-900/30 via-slate-900/40 to-emerald-900/30 backdrop-blur-xl border border-yellow-500/30 rounded-2xl p-8 shadow-[0_8px_32px_0_rgba(217,119,6,0.2)] animate-fadeInUp animation-delay-400">
+          <h3 className="text-2xl font-bold mb-6 flex items-center">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-emerald-400 to-yellow-600">
+              📰 Latest Real Estate News
+            </span>
+          </h3>
+
+          <div className="space-y-4">
+            {analysis.latestNews.map((news, idx) => (
+              <div
+                key={idx}
+                className="bg-slate-950/60 backdrop-blur-sm border-l-4 border-yellow-500/50 rounded-lg p-5 hover:bg-slate-900/70 hover:border-yellow-500 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 group animate-scaleIn"
+                style={{ animationDelay: `${idx * 100}ms` }}
+              >
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+                  <h4 className="text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-yellow-400 group-hover:to-emerald-400 transition-all duration-300 flex-1">
+                    {news.headline}
+                  </h4>
+                  <div className="flex items-center gap-4 text-sm">
+                    <span className="text-yellow-400 font-medium whitespace-nowrap">{news.date}</span>
+                    <span className="px-3 py-1 bg-yellow-500/20 border border-yellow-500/30 rounded-full text-yellow-300 text-xs font-semibold whitespace-nowrap">
+                      {news.source}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-slate-300 text-sm leading-relaxed">{news.summary}</p>
+              </div>
+            ))}
           </div>
         </div>
       )}

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { BarChart3, Home, Layers, Send, Grid3x3, UserPlus, LogOut } from 'lucide-react';
+import { Home, Layers, Send, Grid3x3, UserPlus, LogOut } from 'lucide-react';
 
 const LandingNavbar = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -22,7 +22,6 @@ const LandingNavbar = () => {
     }, []);
 
     const navItems = [
-        { id: 'analytics', icon: BarChart3, label: 'Analytics' },
         { id: 'home', icon: Home, label: 'Home' },
         { id: 'features', icon: Layers, label: 'Features' },
         { id: 'about', icon: Send, label: 'About' },

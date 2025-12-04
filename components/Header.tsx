@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Map, Building2, TrendingUp, Menu } from 'lucide-react';
+import Link from 'next/link';
+import { Map, Building2, TrendingUp, Menu, Home } from 'lucide-react';
 import { AppView } from '../types';
 
 interface HeaderProps {
@@ -28,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ currentView, setView }) => {
             </div>
           </div>
           
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden md:flex items-center space-x-4">
             <button
               onClick={() => setView(AppView.HEATMAP)}
               className={`flex items-center text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 ${
@@ -51,9 +52,29 @@ const Header: React.FC<HeaderProps> = ({ currentView, setView }) => {
               <Building2 className="w-4 h-4 mr-2" />
               Price Predictor
             </button>
+
+            {/* Home Button */}
+            <Link href="/">
+              <button
+                className="group flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-emerald-500/20 to-yellow-500/20 backdrop-blur-sm border border-emerald-500/30 hover:bg-gradient-to-r hover:from-emerald-500 hover:via-yellow-500 hover:to-emerald-600 hover:border-transparent transition-all duration-300 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:scale-110"
+                aria-label="Back to Home"
+              >
+                <Home className="w-5 h-5 text-emerald-400 group-hover:text-white transition-colors duration-300" />
+              </button>
+            </Link>
           </nav>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-3">
+            {/* Mobile Home Button */}
+            <Link href="/">
+              <button
+                className="group flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500/20 to-yellow-500/20 backdrop-blur-sm border border-emerald-500/30 hover:bg-gradient-to-r hover:from-emerald-500 hover:via-yellow-500 hover:to-emerald-600 hover:border-transparent transition-all duration-300 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:scale-110"
+                aria-label="Back to Home"
+              >
+                <Home className="w-5 h-5 text-emerald-400 group-hover:text-white transition-colors duration-300" />
+              </button>
+            </Link>
+
             <button className="text-slate-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-emerald-400 hover:to-yellow-500 transition-all">
               <Menu className="h-6 w-6" />
             </button>

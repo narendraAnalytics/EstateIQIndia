@@ -83,89 +83,79 @@ const LandingNavbar = () => {
 
                 {/* Navigation Items */}
                 <div className="relative flex items-center gap-8">
-                    <AnimatePresence mode="popLayout">
-                        {navItems.map((item, index) => {
-                            const Icon = item.icon;
-                            const isActive = activeSection === item.id;
-                            const isAnalytics = item.id === 'analytics';
+                    {navItems.map((item, index) => {
+                        const Icon = item.icon;
+                        const isActive = activeSection === item.id;
+                        const isAnalytics = item.id === 'analytics';
+                        const shouldHide = isCollapsed && !isAnalytics;
 
-                            // Hide non-analytics icons when collapsed
-                            if (isCollapsed && !isAnalytics) {
-                                return null;
-                            }
-
-                            return (
-                                <motion.button
-                                    key={item.id}
-                                    onClick={() => handleNavClick(item)}
-                                    layout
-                                    initial={{
-                                        scale: 0,
-                                        opacity: 0
-                                    }}
-                                    animate={{
-                                        scale: isAnalytics && isCollapsed ? 1.1 : 1,
-                                        opacity: 1,
-                                        transition: {
-                                            type: "spring",
-                                            stiffness: 200,
-                                            damping: 20,
-                                            bounce: 0.3
-                                        }
-                                    }}
-                                    exit={{
-                                        scale: 0,
-                                        opacity: 0,
-                                        transition: {
-                                            type: "spring",
-                                            stiffness: 300,
-                                            damping: 25
-                                        }
-                                    }}
+                        return (
+                            <motion.button
+                                key={item.id}
+                                onClick={() => handleNavClick(item)}
+                                initial={{
+                                    scale: 0,
+                                    opacity: 0
+                                }}
+                                animate={{
+                                    scale: shouldHide ? 0 : (isAnalytics && isCollapsed ? 1.1 : 1),
+                                    opacity: shouldHide ? 0 : 1,
+                                    transition: {
+                                        type: "spring",
+                                        stiffness: shouldHide ? 300 : 200,
+                                        damping: shouldHide ? 25 : 20,
+                                        bounce: shouldHide ? 0 : 0.3
+                                    }
+                                }}
+                                className={`
+                                    group relative
+                                    p-3 rounded-2xl
+                                    transition-all duration-300 ease-out
+                                    hover:scale-110
+                                    ${isActive
+                                        ? 'bg-gradient-to-br from-orange-400/30 to-amber-400/30'
+                                        : 'hover:bg-gradient-to-br hover:from-orange-300/20 hover:to-amber-300/20'
+                                    }
+                                    ${!isCollapsed ? 'animate-fadeInScale' : ''}
+                                    ${shouldHide ? 'pointer-events-none' : ''}
+                                `}
+                                style={{
+                                    animationDelay: `${index * 100}ms`,
+                                    visibility: shouldHide ? 'hidden' : 'visible'
+                                }}
+                                aria-label={item.label}
+                                whileHover={!shouldHide ? { scale: 1.15 } : {}}
+                                whileTap={!shouldHide ? { scale: 0.95 } : {}}
+                            >
+                                <Icon
                                     className={`
-                                        group relative
-                                        p-3 rounded-2xl
-                                        transition-all duration-300 ease-out
-                                        hover:scale-110
+                                        w-6 h-6
+                                        transition-all duration-300
                                         ${isActive
-                                            ? 'bg-gradient-to-br from-orange-400/30 to-amber-400/30'
-                                            : 'hover:bg-gradient-to-br hover:from-orange-300/20 hover:to-amber-300/20'
+                                            ? 'text-orange-600 drop-shadow-[0_0_8px_rgba(234,88,12,0.5)]'
+                                            : 'text-orange-500/70 group-hover:text-orange-600'
                                         }
-                                        ${!isCollapsed ? 'animate-fadeInScale' : ''}
+                                        group-hover:drop-shadow-[0_0_12px_rgba(251,146,60,0.6)]
                                     `}
-                                    style={{ animationDelay: `${index * 100}ms` }}
-                                    aria-label={item.label}
-                                    whileHover={{ scale: 1.15 }}
-                                    whileTap={{ scale: 0.95 }}
-                                >
-                                    <Icon
-                                        className={`
-                                            w-6 h-6
-                                            transition-all duration-300
-                                            ${isActive
-                                                ? 'text-orange-600 drop-shadow-[0_0_8px_rgba(234,88,12,0.5)]'
-                                                : 'text-orange-500/70 group-hover:text-orange-600'
-                                            }
-                                            group-hover:drop-shadow-[0_0_12px_rgba(251,146,60,0.6)]
-                                        `}
+                                />
+
+                                {/* Active indicator dot */}
+                                {isActive && !shouldHide && (
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        animate={{ scale: 1 }}
+                                        className="
+                                            absolute -bottom-1 left-1/2 -translate-x-1/2
+                                            w-1.5 h-1.5 rounded-full
+                                            bg-gradient-to-r from-orange-500 to-amber-500
+                                            shadow-[0_0_8px_rgba(251,146,60,0.8)]
+                                            animate-pulse
+                                        "
                                     />
+                                )}
 
-                                    {/* Active indicator dot */}
-                                    {isActive && (
-                                        <motion.div
-                                            initial={{ scale: 0 }}
-                                            animate={{ scale: 1 }}
-                                            className="
-                                                absolute -bottom-1 left-1/2 -translate-x-1/2
-                                                w-1.5 h-1.5 rounded-full
-                                                bg-gradient-to-r from-orange-500 to-amber-500
-                                                shadow-[0_0_8px_rgba(251,146,60,0.8)]
-                                                animate-pulse
-                                            "
-                                        />
-                                    )}
-
-                                    {/* Hover tooltip */}
+                                {/* Hover tooltip */}
+                                {!shouldHide && (
                                     <div className="
                                         absolute -bottom-12 left-1/2 -translate-x-1/2
                                         px-3 py-1.5 rounded-lg
@@ -179,10 +169,10 @@ const LandingNavbar = () => {
                                     ">
                                         {item.label}
                                     </div>
-                                </motion.button>
-                            );
-                        })}
-                    </AnimatePresence>
+                                )}
+                            </motion.button>
+                        );
+                    })}
                 </div>
             </div>
         </nav>

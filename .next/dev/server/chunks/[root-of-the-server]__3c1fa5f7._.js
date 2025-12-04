@@ -201,13 +201,16 @@ async function POST(request) {
 IMPORTANT: Use PLAIN TEXT ONLY. Do NOT use markdown formatting symbols like **, *, #, or other markup. Write clean, readable text without any formatting characters.
 
 **USE GOOGLE SEARCH** for the latest Q4 2024 / Q1 2025 data on:
-- Property price trends and YoY appreciation rates (2023-2024)
+- Property price trends and YoY appreciation rates (2024-2025 - CURRENT YEAR DATA ONLY)
 - Recent infrastructure project announcements
 - IT parks, SEZ, and business hub developments
 - RERA compliance status and state regulations
 - Stamp duty rates and circle rates
 - Government housing schemes (PMAY, Smart Cities, AMRUT)
 - Fastest growing cities by price appreciation
+- Latest real estate news and market developments (past 6 months)
+- Political factors affecting real estate (policies, regulations, government initiatives)
+- Economic indicators (GDP growth, employment rates, major industries)
 
 **USE GOOGLE MAPS** to identify:
 - Metro/railway connectivity for major cities
@@ -216,40 +219,68 @@ IMPORTANT: Use PLAIN TEXT ONLY. Do NOT use markdown formatting symbols like **, 
 
 **Analysis Requirements:**
 
-1. **Investment Score (1-100):** Based on infrastructure, economic growth, property appreciation, rental yields, and regulatory environment.
+1. **Executive Summary:** Provide a comprehensive overview covering:
+   - Overview: 2-3 sentences about the overall real estate landscape
+   - Political Factors: Government policies, regulatory changes, upcoming elections impact, housing schemes
+   - Economic Factors: State GDP growth, employment trends, major industries, investment climate
+   - Market Outlook: Future projections, emerging opportunities, risk factors
 
-2. **Market Summary:** 2-3 sentences covering current market conditions, recent price trends, and growth drivers.
+2. **Latest Real Estate News (5-7 recent articles):** Search for latest news about ${stateName} real estate from past 6 months:
+   - Headline
+   - Date (format: "DD MMM YYYY")
+   - Summary (1-2 sentences)
+   - Source name
 
-3. **Top Cities (3-5):** Select cities with best overall investment potential. For EACH city provide:
+3. **Investment Score (1-100):** Based on infrastructure, economic growth, property appreciation, rental yields, and regulatory environment.
+
+4. **Market Summary:** 2-3 sentences covering current market conditions, recent price trends, and growth drivers.
+
+5. **Top Cities (3-5):** Select cities with best overall investment potential. For EACH city provide:
    - Name
    - Tier classification (Tier 1/2/3) with justification
    - Growth potential (High/Moderate/Stable) based on upcoming projects
    - Average price per sq.ft (₹) - mention area type (e.g., "₹5,500 in prime localities")
    - Description: Why invest? Include proximity to IT hubs, metro stations, rental yield potential, infrastructure access
 
-4. **Fastest Growing Cities (Top 3):** Cities with highest price appreciation in ${stateName}:
+6. **Fastest Growing Cities (Top 3):** Cities with highest price appreciation in ${stateName}:
    - City name
-   - YoY growth rate (%) for 2023-2024
+   - YoY growth rate (%) for 2024-2025 (USE CURRENT YEAR DATA - NOT 2023-2024)
    - Reason for rapid growth (new metro, IT park, airport expansion, smart city status, etc.)
 
-5. **Market Trends (3-5 key trends):**
-   - Overall state price appreciation % (YoY 2023-2024)
+7. **Market Trends (3-5 key trends):**
+   - Overall state price appreciation % (YoY 2024-2025 - CURRENT YEAR ONLY)
    - Emerging micro-markets and localities
    - Demand shifts (residential vs commercial)
    - Impact of new infrastructure projects
    - Rental yield trends and investment preferences
 
-6. **Infrastructure Projects (3-5 major projects):**
+8. **Infrastructure Projects (3-5 major projects):**
    - Include project name, timeline/completion year, and investment impact
    - Focus on: metro lines, expressways, airports, IT parks, smart city initiatives, industrial corridors
 
 **CRITICAL:**
 1. Return ONLY a valid JSON object. No explanatory text before or after.
 2. All text in descriptions, trends, and reasons must be PLAIN TEXT without markdown symbols (**, *, #, etc.)
+3. For growth rates, use LATEST 2024-2025 data from Google Search - DO NOT use 2023-2024 data
+4. For news, fetch REAL recent articles from the past 6 months
 
 JSON Format:
 {
   "stateName": "${stateName}",
+  "executiveSummary": {
+    "overview": "<2-3 sentences about overall real estate landscape>",
+    "politicalFactors": "<government policies, regulations, elections impact, housing schemes>",
+    "economicFactors": "<GDP growth, employment, industries, investment climate>",
+    "marketOutlook": "<future projections, opportunities, risks>"
+  },
+  "latestNews": [
+    {
+      "headline": "<news headline>",
+      "date": "<DD MMM YYYY>",
+      "summary": "<1-2 sentence summary>",
+      "source": "<source name>"
+    }
+  ],
   "investmentScore": <number 1-100>,
   "summary": "<comprehensive 2-3 sentence market overview>",
   "topCities": [
@@ -264,7 +295,7 @@ JSON Format:
   "fastestGrowingCities": [
     {
       "name": "<city name>",
-      "growthRate": "<XX% YoY 2023-2024>",
+      "growthRate": "<XX% YoY 2024-2025>",
       "reason": "<why it's growing fast>"
     }
   ],
@@ -305,6 +336,27 @@ Return ONLY the JSON object, nothing else.`;
         jsonText = jsonText.substring(firstBrace, lastBrace + 1).trim();
         try {
             const data = JSON.parse(jsonText);
+            // Validate and transform arrays to ensure they contain only strings
+            if (data.marketTrends && Array.isArray(data.marketTrends)) {
+                data.marketTrends = data.marketTrends.map((item)=>{
+                    if (typeof item === 'string') return item;
+                    if (typeof item === 'object' && item !== null) {
+                        // If it's an object, concatenate its values
+                        return Object.values(item).join(' - ');
+                    }
+                    return String(item);
+                });
+            }
+            if (data.infrastructureProjects && Array.isArray(data.infrastructureProjects)) {
+                data.infrastructureProjects = data.infrastructureProjects.map((item)=>{
+                    if (typeof item === 'string') return item;
+                    if (typeof item === 'object' && item !== null) {
+                        // If it's an object, concatenate its values
+                        return Object.values(item).join(' - ');
+                    }
+                    return String(item);
+                });
+            }
             console.log('✅ Successfully parsed state analysis for:', stateName);
             return __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(data);
         } catch (parseError) {

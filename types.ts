@@ -12,10 +12,26 @@ export interface FastGrowingCity {
   reason: string;
 }
 
+export interface ExecutiveSummary {
+  overview: string;
+  politicalFactors: string;
+  economicFactors: string;
+  marketOutlook: string;
+}
+
+export interface NewsArticle {
+  headline: string;
+  date: string;
+  summary: string;
+  source: string;
+}
+
 export interface StateAnalysis {
   stateName: string;
   investmentScore: number; // 1-100
   summary: string;
+  executiveSummary?: ExecutiveSummary;
+  latestNews?: NewsArticle[];
   topCities: CityData[];
   fastestGrowingCities?: FastGrowingCity[];
   marketTrends: string[];
@@ -34,6 +50,13 @@ export interface ValuationResult {
   nearbyAmenities: string[];
   growthFactors: string[];
   riskFactors: string[];
+  categorizedAmenities?: {
+    schools: string[];
+    hospitals: string[];
+    transport: string[];
+    shopping: string[];
+    parks: string[];
+  };
   groundingChunks?: GroundingChunk[];
 }
 

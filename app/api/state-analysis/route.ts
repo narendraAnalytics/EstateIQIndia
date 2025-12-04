@@ -172,6 +172,30 @@ Return ONLY the JSON object, nothing else.`;
 
     try {
       const data = JSON.parse(jsonText);
+
+      // Validate and transform arrays to ensure they contain only strings
+      if (data.marketTrends && Array.isArray(data.marketTrends)) {
+        data.marketTrends = data.marketTrends.map((item: any) => {
+          if (typeof item === 'string') return item;
+          if (typeof item === 'object' && item !== null) {
+            // If it's an object, concatenate its values
+            return Object.values(item).join(' - ');
+          }
+          return String(item);
+        });
+      }
+
+      if (data.infrastructureProjects && Array.isArray(data.infrastructureProjects)) {
+        data.infrastructureProjects = data.infrastructureProjects.map((item: any) => {
+          if (typeof item === 'string') return item;
+          if (typeof item === 'object' && item !== null) {
+            // If it's an object, concatenate its values
+            return Object.values(item).join(' - ');
+          }
+          return String(item);
+        });
+      }
+
       console.log('✅ Successfully parsed state analysis for:', stateName);
       return NextResponse.json(data);
     } catch (parseError) {

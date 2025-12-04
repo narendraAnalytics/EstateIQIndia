@@ -1,5 +1,4 @@
 {
-  "/api/property-valuation/route": "app/api/property-valuation/route.js",
   "/api/state-analysis/route": "app/api/state-analysis/route.js",
   "/page": "app/page.js"
 }

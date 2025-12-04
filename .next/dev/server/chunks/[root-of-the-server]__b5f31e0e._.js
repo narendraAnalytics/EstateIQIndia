@@ -208,7 +208,7 @@ async function POST(request) {
       - Recent price trends in the location
 
       ## Location Analysis
-      Using Google Maps data, identify:
+      Using Google Search, identify:
       - Nearby schools, colleges, and educational institutions
       - Healthcare facilities (hospitals, clinics)
       - Public transport connectivity (metro, bus, railway)
@@ -225,29 +225,16 @@ async function POST(request) {
       ## Confidence Score
       Rate your analysis confidence: Low/Medium/High
 
-      Use Google Search for latest price trends and Google Maps for precise location amenities.
+      Use Google Search for latest price trends and location amenities data.
       Format the response in clear markdown with sections.
     `;
         const config = {
             tools: [
                 {
                     googleSearch: {}
-                },
-                {
-                    googleMaps: {}
                 }
             ]
         };
-        if (userLat && userLng) {
-            config.toolConfig = {
-                retrievalConfig: {
-                    latLng: {
-                        latitude: userLat,
-                        longitude: userLng
-                    }
-                }
-            };
-        }
         const response = await ai.models.generateContent({
             model: "gemini-3-pro-preview",
             contents: prompt,
@@ -257,28 +244,51 @@ async function POST(request) {
         if (!text) {
             throw new Error("No response from AI");
         }
+        // Clean markdown formatting symbols
+        const cleanMarkdown = (text)=>{
+            return text.replace(/\*\*/g, '') // Remove bold markers (**)
+            .replace(/\*/g, '') // Remove italic markers (*)
+            .replace(/^#{1,6}\s+/gm, '') // Remove heading markers (# ## ###)
+            .replace(/`/g, '') // Remove code markers (`)
+            .trim();
+        };
+        const cleanedText = cleanMarkdown(text);
         const groundingChunks = response.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
-        // Extract key information from the response text
+        // Enhanced extraction functions
         const extractSection = (text, keyword)=>{
             const lines = text.split('\n');
             const items = [];
             let inSection = false;
             for (const line of lines){
-                if (line.toLowerCase().includes(keyword.toLowerCase())) {
+                const trimmedLine = line.trim();
+                // Check if this line contains the keyword (case-insensitive, handle markdown headers)
+                if (trimmedLine.toLowerCase().includes(keyword.toLowerCase())) {
                     inSection = true;
                     continue;
                 }
-                if (inSection && line.trim().startsWith('-')) {
-                    items.push(line.trim().substring(1).trim());
-                } else if (inSection && line.startsWith('#')) {
-                    break;
+                // If in section, extract bullet points
+                if (inSection) {
+                    // Check for bullet points (-, *, •)
+                    if (trimmedLine.startsWith('-') || trimmedLine.startsWith('*') || trimmedLine.startsWith('•')) {
+                        const cleaned = trimmedLine.substring(1).trim();
+                        if (cleaned) items.push(cleaned);
+                    } else if (trimmedLine.startsWith('#') || trimmedLine.startsWith('##') && !trimmedLine.toLowerCase().includes(keyword.toLowerCase())) {
+                        break;
+                    }
                 }
             }
             return items;
         };
+        // Extract sections
         const nearbyAmenities = extractSection(text, 'location analysis');
-        const growthFactors = extractSection(text, 'growth factors');
-        const riskFactors = extractSection(text, 'risk factors');
+        const growthFactors = extractSection(text, 'growth factor');
+        const riskFactors = extractSection(text, 'risk factor');
+        // Extract categorized location data
+        const schools = extractSection(text, 'school') || extractSection(text, 'education');
+        const hospitals = extractSection(text, 'hospital') || extractSection(text, 'healthcare');
+        const transport = extractSection(text, 'transport') || extractSection(text, 'connectivity');
+        const shopping = extractSection(text, 'shopping') || extractSection(text, 'mall');
+        const parks = extractSection(text, 'park') || extractSection(text, 'recreation');
         // Extract price range if mentioned
         const priceMatch = text.match(/₹[\d,]+-?[\d,]*/g);
         const estimatedPriceRange = priceMatch ? priceMatch[0] : "See detailed analysis";
@@ -292,10 +302,17 @@ async function POST(request) {
         return __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             estimatedPriceRange,
             confidenceScore,
-            locationAnalysis: text,
+            locationAnalysis: cleanedText,
             nearbyAmenities,
             growthFactors,
             riskFactors,
+            categorizedAmenities: {
+                schools,
+                hospitals,
+                transport,
+                shopping,
+                parks
+            },
             groundingChunks
         });
     } catch (error) {

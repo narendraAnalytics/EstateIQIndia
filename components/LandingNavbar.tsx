@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Home, Layers, Send, Grid3x3, UserPlus, LogOut } from 'lucide-react';
+import { Home, Layers, BarChart, Send, Grid3x3, UserPlus, LogOut } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const LandingNavbar = () => {
     const [isSticky, setIsSticky] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
     const [isLoggedIn, setIsLoggedIn] = useState(false); // Mock state for auth
+    const [isCollapsed, setIsCollapsed] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,6 +26,7 @@ const LandingNavbar = () => {
     const navItems = [
         { id: 'home', icon: Home, label: 'Home' },
         { id: 'features', icon: Layers, label: 'Features' },
+        { id: 'analytics', icon: BarChart, label: 'Analytics' },
         { id: 'about', icon: Send, label: 'About' },
         { id: 'contact', icon: Grid3x3, label: 'Contact' },
     ];
@@ -33,6 +36,18 @@ const LandingNavbar = () => {
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
+    const handleAnalyticsClick = () => {
+        setIsCollapsed(!isCollapsed);
+    };
+
+    const handleNavClick = (item: typeof navItems[0]) => {
+        if (item.id === 'analytics') {
+            handleAnalyticsClick();
+        } else {
+            scrollToSection(item.id);
         }
     };
 
@@ -68,68 +83,106 @@ const LandingNavbar = () => {
 
                 {/* Navigation Items */}
                 <div className="relative flex items-center gap-8">
-                    {navItems.map((item, index) => {
-                        const Icon = item.icon;
-                        const isActive = activeSection === item.id;
+                    <AnimatePresence mode="popLayout">
+                        {navItems.map((item, index) => {
+                            const Icon = item.icon;
+                            const isActive = activeSection === item.id;
+                            const isAnalytics = item.id === 'analytics';
 
-                        return (
-                            <button
-                                key={item.id}
-                                onClick={() => scrollToSection(item.id)}
-                                className={`
-                                    group relative
-                                    p-3 rounded-2xl
-                                    transition-all duration-300 ease-out
-                                    hover:scale-110
-                                    ${isActive
-                                        ? 'bg-gradient-to-br from-orange-400/30 to-amber-400/30'
-                                        : 'hover:bg-gradient-to-br hover:from-orange-300/20 hover:to-amber-300/20'
-                                    }
-                                    animate-fadeInScale
-                                `}
-                                style={{ animationDelay: `${index * 100}ms` }}
-                                aria-label={item.label}
-                            >
-                                <Icon
-                                    className={`
-                                        w-6 h-6
-                                        transition-all duration-300
-                                        ${isActive
-                                            ? 'text-orange-600 drop-shadow-[0_0_8px_rgba(234,88,12,0.5)]'
-                                            : 'text-orange-500/70 group-hover:text-orange-600'
+                            // Hide non-analytics icons when collapsed
+                            if (isCollapsed && !isAnalytics) {
+                                return null;
+                            }
+
+                            return (
+                                <motion.button
+                                    key={item.id}
+                                    onClick={() => handleNavClick(item)}
+                                    layout
+                                    initial={{
+                                        scale: 0,
+                                        opacity: 0
+                                    }}
+                                    animate={{
+                                        scale: isAnalytics && isCollapsed ? 1.1 : 1,
+                                        opacity: 1,
+                                        transition: {
+                                            type: "spring",
+                                            stiffness: 200,
+                                            damping: 20,
+                                            bounce: 0.3
                                         }
-                                        group-hover:drop-shadow-[0_0_12px_rgba(251,146,60,0.6)]
+                                    }}
+                                    exit={{
+                                        scale: 0,
+                                        opacity: 0,
+                                        transition: {
+                                            type: "spring",
+                                            stiffness: 300,
+                                            damping: 25
+                                        }
+                                    }}
+                                    className={`
+                                        group relative
+                                        p-3 rounded-2xl
+                                        transition-all duration-300 ease-out
+                                        hover:scale-110
+                                        ${isActive
+                                            ? 'bg-gradient-to-br from-orange-400/30 to-amber-400/30'
+                                            : 'hover:bg-gradient-to-br hover:from-orange-300/20 hover:to-amber-300/20'
+                                        }
+                                        ${!isCollapsed ? 'animate-fadeInScale' : ''}
                                     `}
-                                />
+                                    style={{ animationDelay: `${index * 100}ms` }}
+                                    aria-label={item.label}
+                                    whileHover={{ scale: 1.15 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <Icon
+                                        className={`
+                                            w-6 h-6
+                                            transition-all duration-300
+                                            ${isActive
+                                                ? 'text-orange-600 drop-shadow-[0_0_8px_rgba(234,88,12,0.5)]'
+                                                : 'text-orange-500/70 group-hover:text-orange-600'
+                                            }
+                                            group-hover:drop-shadow-[0_0_12px_rgba(251,146,60,0.6)]
+                                        `}
+                                    />
 
-                                {/* Active indicator dot */}
-                                {isActive && (
+                                    {/* Active indicator dot */}
+                                    {isActive && (
+                                        <motion.div
+                                            initial={{ scale: 0 }}
+                                            animate={{ scale: 1 }}
+                                            className="
+                                                absolute -bottom-1 left-1/2 -translate-x-1/2
+                                                w-1.5 h-1.5 rounded-full
+                                                bg-gradient-to-r from-orange-500 to-amber-500
+                                                shadow-[0_0_8px_rgba(251,146,60,0.8)]
+                                                animate-pulse
+                                            "
+                                        />
+                                    )}
+
+                                    {/* Hover tooltip */}
                                     <div className="
-                                        absolute -bottom-1 left-1/2 -translate-x-1/2
-                                        w-1.5 h-1.5 rounded-full
+                                        absolute -bottom-12 left-1/2 -translate-x-1/2
+                                        px-3 py-1.5 rounded-lg
                                         bg-gradient-to-r from-orange-500 to-amber-500
-                                        shadow-[0_0_8px_rgba(251,146,60,0.8)]
-                                        animate-pulse
-                                    "></div>
-                                )}
-
-                                {/* Hover tooltip */}
-                                <div className="
-                                    absolute -bottom-12 left-1/2 -translate-x-1/2
-                                    px-3 py-1.5 rounded-lg
-                                    bg-gradient-to-r from-orange-500 to-amber-500
-                                    text-white text-xs font-medium
-                                    opacity-0 group-hover:opacity-100
-                                    transition-opacity duration-300
-                                    pointer-events-none
-                                    whitespace-nowrap
-                                    shadow-lg
-                                ">
-                                    {item.label}
-                                </div>
-                            </button>
-                        );
-                    })}
+                                        text-white text-xs font-medium
+                                        opacity-0 group-hover:opacity-100
+                                        transition-opacity duration-300
+                                        pointer-events-none
+                                        whitespace-nowrap
+                                        shadow-lg
+                                    ">
+                                        {item.label}
+                                    </div>
+                                </motion.button>
+                            );
+                        })}
+                    </AnimatePresence>
                 </div>
             </div>
         </nav>

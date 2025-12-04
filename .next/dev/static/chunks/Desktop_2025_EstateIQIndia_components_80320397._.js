@@ -10,13 +10,17 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQI
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$house$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Home$3e$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/lucide-react/dist/esm/icons/house.js [app-client] (ecmascript) <export default as Home>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/lucide-react/dist/esm/icons/layers.js [app-client] (ecmascript) <export default as Layers>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$no$2d$axes$2d$column$2d$increasing$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart$3e$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/lucide-react/dist/esm/icons/chart-no-axes-column-increasing.js [app-client] (ecmascript) <export default as BarChart>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/lucide-react/dist/esm/icons/send.js [app-client] (ecmascript) <export default as Send>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$grid$2d$3x3$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Grid3x3$3e$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/lucide-react/dist/esm/icons/grid-3x3.js [app-client] (ecmascript) <export default as Grid3x3>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2d$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__UserPlus$3e$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/lucide-react/dist/esm/icons/user-plus.js [app-client] (ecmascript) <export default as UserPlus>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$log$2d$out$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__LogOut$3e$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/lucide-react/dist/esm/icons/log-out.js [app-client] (ecmascript) <export default as LogOut>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/2025/EstateIQIndia/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
+;
 ;
 ;
 const LandingNavbar = ()=>{
@@ -24,6 +28,7 @@ const LandingNavbar = ()=>{
     const [isSticky, setIsSticky] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [activeSection, setActiveSection] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('home');
     const [isLoggedIn, setIsLoggedIn] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false); // Mock state for auth
+    const [isCollapsed, setIsCollapsed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "LandingNavbar.useEffect": ()=>{
             const handleScroll = {
@@ -53,6 +58,11 @@ const LandingNavbar = ()=>{
             label: 'Features'
         },
         {
+            id: 'analytics',
+            icon: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$no$2d$axes$2d$column$2d$increasing$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart$3e$__["BarChart"],
+            label: 'Analytics'
+        },
+        {
             id: 'about',
             icon: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"],
             label: 'About'
@@ -71,6 +81,16 @@ const LandingNavbar = ()=>{
                 behavior: 'smooth',
                 block: 'start'
             });
+        }
+    };
+    const handleAnalyticsClick = ()=>{
+        setIsCollapsed(!isCollapsed);
+    };
+    const handleNavClick = (item)=>{
+        if (item.id === 'analytics') {
+            handleAnalyticsClick();
+        } else {
+            scrollToSection(item.id);
         }
     };
     const handleAuthClick = ()=>{
@@ -94,77 +114,125 @@ const LandingNavbar = ()=>{
                             className: "absolute inset-0 rounded-full bg-gradient-to-r from-orange-300/10 via-transparent to-yellow-300/10 blur-sm"
                         }, void 0, false, {
                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                            lineNumber: 67,
+                            lineNumber: 82,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "relative flex items-center gap-8",
-                            children: navItems.map((item, index)=>{
-                                const Icon = item.icon;
-                                const isActive = activeSection === item.id;
-                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: ()=>scrollToSection(item.id),
-                                    className: `
-                                    group relative
-                                    p-3 rounded-2xl
-                                    transition-all duration-300 ease-out
-                                    hover:scale-110
-                                    ${isActive ? 'bg-gradient-to-br from-orange-400/30 to-amber-400/30' : 'hover:bg-gradient-to-br hover:from-orange-300/20 hover:to-amber-300/20'}
-                                    animate-fadeInScale
-                                `,
-                                    style: {
-                                        animationDelay: `${index * 100}ms`
-                                    },
-                                    "aria-label": item.label,
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                                            className: `
-                                        w-6 h-6
-                                        transition-all duration-300
-                                        ${isActive ? 'text-orange-600 drop-shadow-[0_0_8px_rgba(234,88,12,0.5)]' : 'text-orange-500/70 group-hover:text-orange-600'}
-                                        group-hover:drop-shadow-[0_0_12px_rgba(251,146,60,0.6)]
-                                    `
-                                        }, void 0, false, {
-                                            fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                                            lineNumber: 93,
-                                            columnNumber: 33
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "   absolute -bottom-1 left-1/2 -translate-x-1/2   w-1.5 h-1.5 rounded-full   bg-gradient-to-r from-orange-500 to-amber-500   shadow-[0_0_8px_rgba(251,146,60,0.8)]   animate-pulse   "
-                                        }, void 0, false, {
-                                            fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                                            lineNumber: 107,
-                                            columnNumber: 37
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "   absolute -bottom-12 left-1/2 -translate-x-1/2   px-3 py-1.5 rounded-lg   bg-gradient-to-r from-orange-500 to-amber-500   text-white text-xs font-medium   opacity-0 group-hover:opacity-100   transition-opacity duration-300   pointer-events-none   whitespace-nowrap   shadow-lg   ",
-                                            children: item.label
-                                        }, void 0, false, {
-                                            fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                                            lineNumber: 117,
-                                            columnNumber: 33
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    ]
-                                }, item.id, true, {
-                                    fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                                    lineNumber: 76,
-                                    columnNumber: 29
-                                }, ("TURBOPACK compile-time value", void 0));
-                            })
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
+                                mode: "popLayout",
+                                children: navItems.map((item, index)=>{
+                                    const Icon = item.icon;
+                                    const isActive = activeSection === item.id;
+                                    const isAnalytics = item.id === 'analytics';
+                                    // Hide non-analytics icons when collapsed
+                                    if (isCollapsed && !isAnalytics) {
+                                        return null;
+                                    }
+                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
+                                        onClick: ()=>handleNavClick(item),
+                                        layout: true,
+                                        initial: {
+                                            scale: 0,
+                                            opacity: 0
+                                        },
+                                        animate: {
+                                            scale: isAnalytics && isCollapsed ? 1.1 : 1,
+                                            opacity: 1,
+                                            transition: {
+                                                type: "spring",
+                                                stiffness: 200,
+                                                damping: 20,
+                                                bounce: 0.3
+                                            }
+                                        },
+                                        exit: {
+                                            scale: 0,
+                                            opacity: 0,
+                                            transition: {
+                                                type: "spring",
+                                                stiffness: 300,
+                                                damping: 25
+                                            }
+                                        },
+                                        className: `
+                                        group relative
+                                        p-3 rounded-2xl
+                                        transition-all duration-300 ease-out
+                                        hover:scale-110
+                                        ${isActive ? 'bg-gradient-to-br from-orange-400/30 to-amber-400/30' : 'hover:bg-gradient-to-br hover:from-orange-300/20 hover:to-amber-300/20'}
+                                        ${!isCollapsed ? 'animate-fadeInScale' : ''}
+                                    `,
+                                        style: {
+                                            animationDelay: `${index * 100}ms`
+                                        },
+                                        "aria-label": item.label,
+                                        whileHover: {
+                                            scale: 1.15
+                                        },
+                                        whileTap: {
+                                            scale: 0.95
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
+                                                className: `
+                                            w-6 h-6
+                                            transition-all duration-300
+                                            ${isActive ? 'text-orange-600 drop-shadow-[0_0_8px_rgba(234,88,12,0.5)]' : 'text-orange-500/70 group-hover:text-orange-600'}
+                                            group-hover:drop-shadow-[0_0_12px_rgba(251,146,60,0.6)]
+                                        `
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
+                                                lineNumber: 141,
+                                                columnNumber: 37
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                                initial: {
+                                                    scale: 0
+                                                },
+                                                animate: {
+                                                    scale: 1
+                                                },
+                                                className: "   absolute -bottom-1 left-1/2 -translate-x-1/2   w-1.5 h-1.5 rounded-full   bg-gradient-to-r from-orange-500 to-amber-500   shadow-[0_0_8px_rgba(251,146,60,0.8)]   animate-pulse   "
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
+                                                lineNumber: 155,
+                                                columnNumber: 41
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "   absolute -bottom-12 left-1/2 -translate-x-1/2   px-3 py-1.5 rounded-lg   bg-gradient-to-r from-orange-500 to-amber-500   text-white text-xs font-medium   opacity-0 group-hover:opacity-100   transition-opacity duration-300   pointer-events-none   whitespace-nowrap   shadow-lg   ",
+                                                children: item.label
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
+                                                lineNumber: 169,
+                                                columnNumber: 37
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, item.id, true, {
+                                        fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
+                                        lineNumber: 98,
+                                        columnNumber: 33
+                                    }, ("TURBOPACK compile-time value", void 0));
+                                })
+                            }, void 0, false, {
+                                fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
+                                lineNumber: 86,
+                                columnNumber: 21
+                            }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                            lineNumber: 70,
+                            lineNumber: 85,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                    lineNumber: 56,
+                    lineNumber: 71,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                lineNumber: 47,
+                lineNumber: 62,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -191,7 +259,7 @@ const LandingNavbar = ()=>{
                         className: "absolute inset-0 rounded-full bg-gradient-to-r from-orange-300/10 via-transparent to-yellow-300/10 blur-sm"
                     }, void 0, false, {
                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                        lineNumber: 157,
+                        lineNumber: 210,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -202,7 +270,7 @@ const LandingNavbar = ()=>{
                                     className: "w-5 h-5 text-orange-600 group-hover:text-orange-700 transition-colors duration-300 group-hover:drop-shadow-[0_0_8px_rgba(234,88,12,0.6)]"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                                    lineNumber: 163,
+                                    lineNumber: 216,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -210,7 +278,7 @@ const LandingNavbar = ()=>{
                                     children: "Sign Out"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                                    lineNumber: 164,
+                                    lineNumber: 217,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
@@ -220,7 +288,7 @@ const LandingNavbar = ()=>{
                                     className: "w-5 h-5 text-orange-600 group-hover:text-orange-700 transition-colors duration-300 group-hover:drop-shadow-[0_0_8px_rgba(234,88,12,0.6)]"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                                    lineNumber: 170,
+                                    lineNumber: 223,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -228,37 +296,37 @@ const LandingNavbar = ()=>{
                                     children: "Sign Up"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                                    lineNumber: 171,
+                                    lineNumber: 224,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true)
                     }, void 0, false, {
                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                        lineNumber: 160,
+                        lineNumber: 213,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$2025$2f$EstateIQIndia$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 rounded-full bg-gradient-to-r from-orange-400/0 to-amber-400/0 group-hover:from-orange-400/20 group-hover:to-amber-400/20 transition-all duration-300"
                     }, void 0, false, {
                         fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                        lineNumber: 179,
+                        lineNumber: 232,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-                lineNumber: 138,
+                lineNumber: 191,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/2025/EstateIQIndia/components/LandingNavbar.tsx",
-        lineNumber: 45,
+        lineNumber: 60,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(LandingNavbar, "P8XFZ2wRSZJfJYR2oesxKQgIOXI=");
+_s(LandingNavbar, "0C6tARK2qA7HgWaIODUXHB+ht2Y=");
 _c = LandingNavbar;
 const __TURBOPACK__default__export__ = LandingNavbar;
 var _c;

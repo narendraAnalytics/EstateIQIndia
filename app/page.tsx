@@ -1,5 +1,6 @@
 import LandingNavbar from '@/components/LandingNavbar';
 import HeroSection from '@/components/HeroSection';
+import FeaturesSection from '@/components/FeaturesSection';
 
 export default function Landing() {
     return (
@@ -28,14 +29,9 @@ export default function Landing() {
                 <section id="home">
                     <HeroSection />
                 </section>
-
-                {/* Other sections */}
-                <section id="analytics" className="min-h-screen flex items-center justify-center">
-                    {/* Analytics section - to be added */}
-                </section>
-
-                <section id="features" className="min-h-screen flex items-center justify-center">
-                    {/* Features section - to be added */}
+                
+                <section id="features">
+                    <FeaturesSection />
                 </section>
 
                 <section id="about" className="min-h-screen flex items-center justify-center">

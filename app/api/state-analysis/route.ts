@@ -27,19 +27,32 @@ export async function POST(request: NextRequest) {
     // Initialize GoogleGenAI inside the function
     const ai = new GoogleGenAI({ apiKey });
 
+    // Calculate current date and 6 months ago dynamically
+    const currentDate = new Date();
+    const sixMonthsAgo = new Date();
+    sixMonthsAgo.setMonth(currentDate.getMonth() - 6);
+
+    // Format dates for the prompt
+    const currentDateStr = currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    const sixMonthsAgoStr = sixMonthsAgo.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    const currentYear = currentDate.getFullYear();
+
     const prompt = `You are an expert India real estate investment advisor. Analyze the investment potential for ${stateName} state.
+
+IMPORTANT - TODAY'S DATE: ${currentDateStr}
+Current Year: ${currentYear}
 
 IMPORTANT: Use PLAIN TEXT ONLY. Do NOT use markdown formatting symbols like **, *, #, or other markup. Write clean, readable text without any formatting characters.
 
-**USE GOOGLE SEARCH** for the latest Q4 2024 / Q1 2025 data on:
-- Property price trends and YoY appreciation rates (2024-2025 - CURRENT YEAR DATA ONLY)
+**USE GOOGLE SEARCH** for the latest data on:
+- Property price trends and YoY appreciation rates (${currentYear} - CURRENT YEAR DATA ONLY)
 - Recent infrastructure project announcements
 - IT parks, SEZ, and business hub developments
 - RERA compliance status and state regulations
 - Stamp duty rates and circle rates
 - Government housing schemes (PMAY, Smart Cities, AMRUT)
 - Fastest growing cities by price appreciation
-- Latest real estate news and market developments (past 6 months)
+- Latest real estate news and market developments (from ${sixMonthsAgoStr} to ${currentDateStr} ONLY)
 - Political factors affecting real estate (policies, regulations, government initiatives)
 - Economic indicators (GDP growth, employment rates, major industries)
 
@@ -56,7 +69,8 @@ IMPORTANT: Use PLAIN TEXT ONLY. Do NOT use markdown formatting symbols like **, 
    - Economic Factors: State GDP growth, employment trends, major industries, investment climate
    - Market Outlook: Future projections, emerging opportunities, risk factors
 
-2. **Latest Real Estate News (5-7 recent articles):** Search for latest news about ${stateName} real estate from past 6 months:
+2. **Latest Real Estate News (5-7 recent articles):** Search for latest news about ${stateName} real estate from ${sixMonthsAgoStr} to ${currentDateStr}:
+   - MUST be published between ${sixMonthsAgoStr} and ${currentDateStr} (NO older articles from previous years)
    - Headline
    - Date (format: "DD MMM YYYY")
    - Summary (1-2 sentences)
@@ -75,11 +89,11 @@ IMPORTANT: Use PLAIN TEXT ONLY. Do NOT use markdown formatting symbols like **, 
 
 6. **Fastest Growing Cities (Top 3):** Cities with highest price appreciation in ${stateName}:
    - City name
-   - YoY growth rate (%) for 2024-2025 (USE CURRENT YEAR DATA - NOT 2023-2024)
+   - YoY growth rate (%) for ${currentYear-1}-${currentYear} (USE CURRENT YEAR DATA)
    - Reason for rapid growth (new metro, IT park, airport expansion, smart city status, etc.)
 
 7. **Market Trends (3-5 key trends):**
-   - Overall state price appreciation % (YoY 2024-2025 - CURRENT YEAR ONLY)
+   - Overall state price appreciation % (YoY ${currentYear-1}-${currentYear} - CURRENT YEAR ONLY)
    - Emerging micro-markets and localities
    - Demand shifts (residential vs commercial)
    - Impact of new infrastructure projects
@@ -92,8 +106,8 @@ IMPORTANT: Use PLAIN TEXT ONLY. Do NOT use markdown formatting symbols like **, 
 **CRITICAL:**
 1. Return ONLY a valid JSON object. No explanatory text before or after.
 2. All text in descriptions, trends, and reasons must be PLAIN TEXT without markdown symbols (**, *, #, etc.)
-3. For growth rates, use LATEST 2024-2025 data from Google Search - DO NOT use 2023-2024 data
-4. For news, fetch REAL recent articles from the past 6 months
+3. For growth rates, use LATEST ${currentYear-1}-${currentYear} data from Google Search
+4. For news, fetch REAL recent articles published between ${sixMonthsAgoStr} and ${currentDateStr} ONLY - reject any older articles
 
 JSON Format:
 {
@@ -126,7 +140,7 @@ JSON Format:
   "fastestGrowingCities": [
     {
       "name": "<city name>",
-      "growthRate": "<XX% YoY 2024-2025>",
+      "growthRate": "<XX% YoY ${currentYear-1}-${currentYear}>",
       "reason": "<why it's growing fast>"
     }
   ],

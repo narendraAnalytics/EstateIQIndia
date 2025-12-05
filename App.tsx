@@ -5,6 +5,7 @@ import Header from './components/Header';
 import IndiaMap from './components/IndiaMap';
 import StateDetail from './components/StateDetail';
 import InvestmentAnalyzer from './components/InvestmentAnalyzer';
+import SearchHistory from './components/SearchHistory';
 import { AppView, StateAnalysis } from './types';
 import { getStateAnalysis } from './services/geminiService';
 import { INITIAL_STATE_ANALYSIS } from './constants';
@@ -100,6 +101,14 @@ const App: React.FC = () => {
 
         {currentView === AppView.VALUATION && (
           <InvestmentAnalyzer />
+        )}
+
+        {currentView === AppView.HISTORY && (
+          <SearchHistory
+            onStateClick={handleStateSelect}
+            onValuationClick={() => setView(AppView.VALUATION)}
+            onHeatmapClick={() => setView(AppView.HEATMAP)}
+          />
         )}
       </main>
     </div>

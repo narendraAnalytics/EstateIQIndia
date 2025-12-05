@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from "@google/genai";
+import { stackServerApp } from '@/lib/stack/server';
+import { db } from '@/lib/db';
+import { searchHistory, analysisResults } from '@/lib/db/schema';
+import { and, eq, gt, isNull } from 'drizzle-orm';
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,6 +26,51 @@ export async function POST(request: NextRequest) {
         { error: 'State name is required' },
         { status: 400 }
       );
+    }
+
+    // Get authenticated user (if logged in)
+    let userId: string | null = null;
+    try {
+      const user = await stackServerApp.getUser();
+      userId = user?.id || null;
+      if (userId) {
+        console.log('✅ User authenticated:', userId);
+      } else {
+        console.log('ℹ️ Anonymous user - proceeding without database saves');
+      }
+    } catch (error) {
+      console.log('ℹ️ User not authenticated - proceeding without database saves');
+    }
+
+    // Check for cached analysis (if user is logged in)
+    if (userId) {
+      try {
+        const sevenDaysAgo = new Date();
+        sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+        const cachedAnalysis = await db
+          .select()
+          .from(analysisResults)
+          .where(
+            and(
+              eq(analysisResults.userId, userId),
+              eq(analysisResults.stateName, stateName),
+              eq(analysisResults.analysisType, 'state_overview'),
+              gt(analysisResults.createdAt, sevenDaysAgo),
+              isNull(analysisResults.expiresAt)
+            )
+          )
+          .limit(1);
+
+        if (cachedAnalysis.length > 0) {
+          console.log('🎯 Returning cached analysis for:', stateName);
+          return NextResponse.json(cachedAnalysis[0].analysisData);
+        } else {
+          console.log('📊 No cache found, fetching fresh analysis from Gemini');
+        }
+      } catch (dbError) {
+        console.error('⚠️ Database cache check failed (continuing with API call):', dbError);
+      }
     }
 
     // Initialize GoogleGenAI inside the function
@@ -211,6 +260,38 @@ Return ONLY the JSON object, nothing else.`;
       }
 
       console.log('✅ Successfully parsed state analysis for:', stateName);
+
+      // Save to database (if user is logged in)
+      if (userId) {
+        try {
+          // Save search history
+          await db.insert(searchHistory).values({
+            userId,
+            stateName,
+            searchType: 'state_analysis',
+          });
+
+          // Calculate expiration date (7 days from now)
+          const expiresAt = new Date();
+          expiresAt.setDate(expiresAt.getDate() + 7);
+
+          // Save analysis result for caching
+          await db.insert(analysisResults).values({
+            userId,
+            stateName,
+            analysisType: 'state_overview',
+            analysisData: data,
+            investmentRating: data.investmentScore || null,
+            expiresAt,
+          });
+
+          console.log('💾 Saved analysis to database for user:', userId);
+        } catch (dbError) {
+          console.error('⚠️ Failed to save to database (non-critical):', dbError);
+          // Don't fail the request if database save fails
+        }
+      }
+
       return NextResponse.json(data);
     } catch (parseError) {
       console.error('❌ Failed to parse JSON');

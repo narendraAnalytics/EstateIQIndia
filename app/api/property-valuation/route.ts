@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from "@google/genai";
+import { stackServerApp } from '@/lib/stack/server';
+import { db } from '@/lib/db';
+import { searchHistory, analysisResults } from '@/lib/db/schema';
+import { and, eq, gt, isNull } from 'drizzle-orm';
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,6 +26,58 @@ export async function POST(request: NextRequest) {
         { error: 'Location and property type are required' },
         { status: 400 }
       );
+    }
+
+    // Get authenticated user (if logged in)
+    let userId: string | null = null;
+    try {
+      const user = await stackServerApp.getUser();
+      userId = user?.id || null;
+      if (userId) {
+        console.log('✅ User authenticated:', userId);
+      } else {
+        console.log('ℹ️ Anonymous user - proceeding without database saves');
+      }
+    } catch (error) {
+      console.log('ℹ️ User not authenticated - proceeding without database saves');
+    }
+
+    // Check for cached property valuation (if user is logged in)
+    if (userId) {
+      try {
+        const sevenDaysAgo = new Date();
+        sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+        // Extract city/state from location string (e.g., "Whitefield, Bangalore" -> "Bangalore")
+        const locationParts = location.split(',').map((s: string) => s.trim());
+        const cityName = locationParts.length > 1 ? locationParts[locationParts.length - 1] : location;
+
+        const cachedAnalysis = await db
+          .select()
+          .from(analysisResults)
+          .where(
+            and(
+              eq(analysisResults.userId, userId),
+              eq(analysisResults.analysisType, 'property_valuation'),
+              gt(analysisResults.createdAt, sevenDaysAgo),
+              isNull(analysisResults.expiresAt)
+            )
+          )
+          .limit(1);
+
+        // Check if cached result matches location and property type
+        if (cachedAnalysis.length > 0) {
+          const cached = cachedAnalysis[0].analysisData as any;
+          if (cached && cached.location === location && cached.propertyType === propertyType) {
+            console.log('🎯 Returning cached property valuation for:', location);
+            return NextResponse.json(cached);
+          }
+        }
+
+        console.log('📊 No cache found, fetching fresh valuation from Gemini');
+      } catch (dbError) {
+        console.error('⚠️ Database cache check failed (continuing with API call):', dbError);
+      }
     }
 
     // Initialize GoogleGenAI inside the function
@@ -144,7 +200,9 @@ export async function POST(request: NextRequest) {
       confidenceScore = "Low";
     }
 
-    return NextResponse.json({
+    const resultData = {
+      location,
+      propertyType,
       estimatedPriceRange,
       confidenceScore,
       locationAnalysis: cleanedText,
@@ -159,7 +217,46 @@ export async function POST(request: NextRequest) {
         parks
       },
       groundingChunks
-    });
+    };
+
+    // Save to database (if user is logged in)
+    if (userId) {
+      try {
+        // Extract city/state from location string
+        const locationParts = location.split(',').map((s: string) => s.trim());
+        const cityName = locationParts.length > 1 ? locationParts[locationParts.length - 1] : location;
+        const stateName = locationParts.length > 2 ? locationParts[locationParts.length - 2] : cityName;
+
+        // Save search history
+        await db.insert(searchHistory).values({
+          userId,
+          stateName,
+          cityName,
+          searchType: 'property_valuation',
+        });
+
+        // Calculate expiration date (7 days from now)
+        const expiresAt = new Date();
+        expiresAt.setDate(expiresAt.getDate() + 7);
+
+        // Save property valuation result for caching
+        await db.insert(analysisResults).values({
+          userId,
+          stateName,
+          cityName,
+          analysisType: 'property_valuation',
+          analysisData: resultData,
+          expiresAt,
+        });
+
+        console.log('💾 Saved property valuation to database for user:', userId);
+      } catch (dbError) {
+        console.error('⚠️ Failed to save to database (non-critical):', dbError);
+        // Don't fail the request if database save fails
+      }
+    }
+
+    return NextResponse.json(resultData);
   } catch (error: any) {
     console.error("Valuation Error:", error);
     return NextResponse.json(

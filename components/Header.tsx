@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Map, Building2, TrendingUp, Menu, Home } from 'lucide-react';
+import { Map, Building2, TrendingUp, Menu, Home, History } from 'lucide-react';
 import { AppView } from '../types';
+import { useUser } from '@stackframe/stack';
 
 interface HeaderProps {
   currentView: AppView;
@@ -11,6 +12,9 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ currentView, setView }) => {
+  const user = useUser({ or: 'redirect' });
+  const isLoggedIn = !!user;
+
   return (
     <header className="sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,6 +56,21 @@ const Header: React.FC<HeaderProps> = ({ currentView, setView }) => {
               <Building2 className="w-4 h-4 mr-2" />
               Price Predictor
             </button>
+
+            {/* Search History Button - Only show if logged in */}
+            {isLoggedIn && (
+              <button
+                onClick={() => setView(AppView.HISTORY)}
+                className={`flex items-center text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 ${
+                  currentView === AppView.HISTORY
+                    ? 'bg-gradient-to-r from-emerald-500 via-yellow-500 to-emerald-600 text-white shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:shadow-[0_0_40px_rgba(217,119,6,0.6)] hover:scale-105'
+                    : 'text-white/80 hover:text-white hover:bg-gradient-to-r hover:from-emerald-500/20 hover:to-yellow-500/20 backdrop-blur-sm hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:scale-105'
+                }`}
+              >
+                <History className="w-4 h-4 mr-2" />
+                History
+              </button>
+            )}
 
             {/* Home Button */}
             <Link href="/">

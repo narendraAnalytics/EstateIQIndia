@@ -63,7 +63,8 @@ export interface ValuationResult {
 export enum AppView {
   HEATMAP = 'HEATMAP',
   STATE_DETAIL = 'STATE_DETAIL',
-  VALUATION = 'VALUATION'
+  VALUATION = 'VALUATION',
+  HISTORY = 'HISTORY'
 }
 
 export interface MapPathProps {

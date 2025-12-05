@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ES/Desktop/2025/EstateIQIndia/app/handler/layout.tsx"],"sourcesContent":["export default function HandlerLayout({\r\n  children,\r\n}: {\r\n  children: React.ReactNode;\r\n}) {\r\n  return (\r\n    <div className=\"min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-emerald-900 via-teal-800 to-emerald-900\">\r\n      {/* Centered Container */}\r\n      <div className=\"w-full max-w-md mx-auto px-4\">\r\n        {children}\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS,cAAc,EACpC,QAAQ,EAGT;IACC,qBACE,kRAAC;QAAI,WAAU;kBAEb,cAAA,kRAAC;YAAI,WAAU;sBACZ;;;;;;;;;;;AAIT"}}]
-}

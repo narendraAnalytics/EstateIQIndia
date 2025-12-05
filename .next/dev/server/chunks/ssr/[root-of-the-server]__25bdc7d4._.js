@@ -92,17 +92,17 @@ function RootLayout({ children }) {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/Desktop/2025/EstateIQIndia/app/layout.tsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/Desktop/2025/EstateIQIndia/app/layout.tsx",
-            lineNumber: 25,
+            lineNumber: 26,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/Desktop/2025/EstateIQIndia/app/layout.tsx",
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 9
     }, this);
 }

@@ -568,6 +568,22 @@ body:after {
   top: 1.5rem;
 }
 
+.right-16 {
+  right: 4rem;
+}
+
+.right-1 {
+  right: .25rem;
+}
+
+.right-2 {
+  right: .5rem;
+}
+
+.right-3 {
+  right: .75rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -677,6 +693,10 @@ body:after {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -1140,6 +1160,10 @@ body:after {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: .25rem;
+}
+
 .gap-12 {
   gap: 3rem;
 }
@@ -1294,6 +1318,14 @@ body:after {
   border-top-width: 2px;
 }
 
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
+.border-t-4 {
+  border-top-width: 4px;
+}
+
 .border-blue-500\/20 {
   border-color: #3b82f633;
 }
@@ -1425,6 +1457,11 @@ body:after {
 
 .border-yellow-500\/50 {
   border-color: #eab30880;
+}
+
+.border-orange-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 88 12 / var(--tw-border-opacity, 1));
 }
 
 .border-t-transparent {
@@ -1652,6 +1689,12 @@ body:after {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-emerald-900 {
+  --tw-gradient-from: #064e3b var(--tw-gradient-from-position);
+  --tw-gradient-to: #064e3b00 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-emerald-900\/30 {
   --tw-gradient-from: #064e3b4d var(--tw-gradient-from-position);
   --tw-gradient-to: #064e3b00 var(--tw-gradient-to-position);
@@ -1827,6 +1870,11 @@ body:after {
   --tw-gradient-stops: var(--tw-gradient-from), #0f172a66 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-teal-800 {
+  --tw-gradient-to: #115e5900 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #115e59 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .via-transparent {
   --tw-gradient-to: #0000 var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1882,6 +1930,10 @@ body:after {
 
 .to-emerald-600\/30 {
   --tw-gradient-to: #0596694d var(--tw-gradient-to-position);
+}
+
+.to-emerald-900 {
+  --tw-gradient-to: #064e3b var(--tw-gradient-to-position);
 }
 
 .to-emerald-900\/30 {
@@ -2080,6 +2132,10 @@ body:after {
   padding-left: 2.5rem;
 }
 
+.pl-7 {
+  padding-left: 1.75rem;
+}
+
 .pr-4 {
   padding-right: 1rem;
 }
@@ -2214,6 +2270,10 @@ body:after {
 
 .text-orange-500\/70 {
   color: #f97316b3;
+}
+
+.text-orange-500\/80 {
+  color: #f97316cc;
 }
 
 .text-orange-600 {

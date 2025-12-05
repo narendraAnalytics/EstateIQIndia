@@ -4,8 +4,13 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { TrendingUp, MapPin, Brain, CheckCircle2 } from 'lucide-react';
+import { useUser } from '@stackframe/stack';
+import { useRouter } from 'next/navigation';
 
 const HeroSection = () => {
+    const user = useUser();
+    const router = useRouter();
+
     // Carousel state
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const images = [
@@ -70,8 +75,15 @@ const HeroSection = () => {
 
                         {/* CTA Button */}
                         <div className="flex items-center gap-4 pt-4">
-                            <Link href="/dashboard">
-                                <button className="
+                            <button
+                                onClick={() => {
+                                    if (user) {
+                                        router.push('/dashboard');
+                                    } else {
+                                        router.push('/handler/sign-in');
+                                    }
+                                }}
+                                className="
                                     group relative
                                     px-8 py-4 rounded-full
                                     bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600
@@ -82,15 +94,14 @@ const HeroSection = () => {
                                     transition-all duration-300
                                     overflow-hidden
                                 ">
-                                    {/* Shimmer effect */}
-                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                                {/* Shimmer effect */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
 
-                                    <span className="relative flex items-center gap-2">
-                                        <TrendingUp className="w-5 h-5" />
-                                        View Analytics
-                                    </span>
-                                </button>
-                            </Link>
+                                <span className="relative flex items-center gap-2">
+                                    <TrendingUp className="w-5 h-5" />
+                                    View Analytics
+                                </span>
+                            </button>
 
                             {/* Secondary link */}
                             <button className="

@@ -3,11 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { Home, Layers, BarChart, Send, Grid3x3, UserPlus, LogOut } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useUser } from '@stackframe/stack';
+import { useRouter } from 'next/navigation';
 
 const LandingNavbar = () => {
+    const user = useUser();
+    const router = useRouter();
     const [isSticky, setIsSticky] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // Mock state for auth
     const [isCollapsed, setIsCollapsed] = useState(false);
 
     useEffect(() => {
@@ -51,9 +54,12 @@ const LandingNavbar = () => {
         }
     };
 
-    const handleAuthClick = () => {
-        // Mock toggle - functionality to be added later
-        setIsLoggedIn(!isLoggedIn);
+    const handleAuthClick = async () => {
+        if (user) {
+            await user.signOut();
+        } else {
+            router.push('/handler/sign-up');
+        }
     };
 
     return (
@@ -181,7 +187,7 @@ const LandingNavbar = () => {
             <button
                 onClick={handleAuthClick}
                 className={`
-                    ${isSticky ? 'fixed top-6 right-8' : 'absolute top-12 right-8'}
+                    ${isSticky ? 'fixed top-6 right-4' : 'absolute top-12 right-4'}
                     z-50
                     group
                     backdrop-blur-xl bg-gradient-to-r from-orange-200/20 via-amber-200/20 to-yellow-200/20
@@ -200,21 +206,26 @@ const LandingNavbar = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-300/10 via-transparent to-yellow-300/10 blur-sm"></div>
 
                 {/* Button Content */}
-                <div className="relative flex items-center gap-3">
-                    {isLoggedIn ? (
+                <div className="relative flex flex-col items-start gap-1">
+                    {user ? (
                         <>
-                            <LogOut className="w-5 h-5 text-orange-600 group-hover:text-orange-700 transition-colors duration-300 group-hover:drop-shadow-[0_0_8px_rgba(234,88,12,0.6)]" />
-                            <span className="text-sm font-semibold text-orange-600 group-hover:text-orange-700 transition-colors duration-300">
-                                Sign Out
+                            <div className="flex items-center gap-2">
+                                <LogOut className="w-5 h-5 text-orange-600 group-hover:text-orange-700 transition-colors duration-300 group-hover:drop-shadow-[0_0_8px_rgba(234,88,12,0.6)]" />
+                                <span className="text-sm font-semibold text-orange-600 group-hover:text-orange-700 transition-colors duration-300">
+                                    Sign Out
+                                </span>
+                            </div>
+                            <span className="text-xs text-orange-500/80 pl-7">
+                                Welcome back, {user.displayName || user.primaryEmail?.split('@')[0] || 'User'}
                             </span>
                         </>
                     ) : (
-                        <>
+                        <div className="flex items-center gap-2">
                             <UserPlus className="w-5 h-5 text-orange-600 group-hover:text-orange-700 transition-colors duration-300 group-hover:drop-shadow-[0_0_8px_rgba(234,88,12,0.6)]" />
                             <span className="text-sm font-semibold text-orange-600 group-hover:text-orange-700 transition-colors duration-300">
                                 Sign Up
                             </span>
-                        </>
+                        </div>
                     )}
                 </div>
 

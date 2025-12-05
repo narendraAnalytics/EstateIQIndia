@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ES/Desktop/2025/EstateIQIndia/app/loading.tsx"],"sourcesContent":["export default function Loading() {\r\n  return (\r\n    <div className=\"flex items-center justify-center min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50\">\r\n      <div className=\"text-center\">\r\n        <div className=\"inline-block animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-orange-600 mb-4\"></div>\r\n        <p className=\"text-orange-600 text-lg font-semibold\">Loading...</p>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,kRAAC;QAAI,WAAU;kBACb,cAAA,kRAAC;YAAI,WAAU;;8BACb,kRAAC;oBAAI,WAAU;;;;;;8BACf,kRAAC;oBAAE,WAAU;8BAAwC;;;;;;;;;;;;;;;;;AAI7D"}}]
+}

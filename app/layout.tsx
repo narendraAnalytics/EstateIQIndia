@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { MapsProvider } from "./providers";
+import { StackProvider } from "@stackframe/stack";
+import { stackClientApp } from "@/lib/stack/client";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -23,9 +26,13 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <MapsProvider>
-                    {children}
-                </MapsProvider>
+                <StackProvider app={stackClientApp}>
+                    <TooltipProvider>
+                        <MapsProvider>
+                            {children}
+                        </MapsProvider>
+                    </TooltipProvider>
+                </StackProvider>
             </body>
         </html>
     );

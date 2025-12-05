@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ES/Desktop/2025/EstateIQIndia/app/handler/%5B...stack%5D/page.tsx"],"sourcesContent":["import { StackHandler } from \"@stackframe/stack\";\r\nimport { stackServerApp } from \"@/lib/stack/server\";\r\n\r\nexport default function Handler(props: any) {\r\n  return (\r\n    <StackHandler\r\n      app={stackServerApp}\r\n      fullPage={true}\r\n    />\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;AACA;;;;AAEe,SAAS,QAAQ,KAAU;IACxC,qBACE,kRAAC,6RAAY;QACX,KAAK,4KAAc;QACnB,UAAU;;;;;;AAGhB"}}]
+}

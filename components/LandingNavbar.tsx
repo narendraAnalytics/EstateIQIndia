@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Home, Layers, BarChart, Send, Grid3x3, UserPlus, LogOut } from 'lucide-react';
+import { Home, Layers, BarChart, Send, Grid3x3, UserPlus, LogOut, TrendingUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useUser } from '@stackframe/stack';
 import { useRouter } from 'next/navigation';
@@ -64,6 +64,58 @@ const LandingNavbar = () => {
 
     return (
         <div className="w-full flex items-center justify-center">
+            {/* Logo - Floating Left */}
+            <motion.div
+                onClick={() => scrollToSection('home')}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className={`
+                    ${isSticky ? 'fixed top-6 left-4' : 'absolute top-12 left-4'}
+                    z-50
+                    cursor-pointer group
+                    backdrop-blur-xl bg-gradient-to-r from-orange-200/20 via-amber-200/20 to-yellow-200/20
+                    rounded-2xl
+                    px-5 py-3.5
+                    shadow-[0_8px_32px_0_rgba(251,146,60,0.15)]
+                    hover:shadow-[0_8px_48px_0_rgba(251,146,60,0.3)]
+                    hover:scale-105
+                    transition-all duration-500 ease-out
+                    border-0
+                    ${isSticky ? 'animate-slideDown' : 'animate-fadeIn'}
+                `}
+                style={{ animationDelay: '100ms' }}
+            >
+                {/* Inner glow effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-300/10 via-transparent to-yellow-300/10 blur-sm"></div>
+
+                {/* Logo Content */}
+                <div className="relative flex items-center gap-3">
+                    {/* Icon with gradient background */}
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <div className="relative bg-gradient-to-br from-orange-400 to-amber-500 p-2.5 rounded-xl shadow-lg group-hover:shadow-[0_0_20px_rgba(251,146,60,0.6)] transition-all duration-300">
+                            <TrendingUp className="w-6 h-6 text-white drop-shadow-lg" />
+                        </div>
+                    </div>
+
+                    {/* Text Content */}
+                    <div className="flex flex-col">
+                        <h1 className="text-xl font-bold tracking-tight leading-tight">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-700 group-hover:from-orange-500 group-hover:via-amber-500 group-hover:to-orange-600 transition-all duration-300">
+                                EstateIQ India
+                            </span>
+                        </h1>
+                        <p className="text-xs text-orange-600/80 font-medium group-hover:text-orange-700/90 transition-colors duration-300">
+                            AI-Powered Investment Heatmap
+                        </p>
+                    </div>
+                </div>
+
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-400/0 to-amber-400/0 group-hover:from-orange-400/20 group-hover:to-amber-400/20 transition-all duration-300"></div>
+            </motion.div>
+
             {/* Main Navigation */}
             <nav
                 className={`
@@ -173,7 +225,7 @@ const LandingNavbar = () => {
                                         whitespace-nowrap
                                         shadow-lg
                                     ">
-                                        {item.label}
+                                        {item.id === 'analytics' ? 'Click here' : item.label}
                                     </div>
                                 )}
                             </motion.button>

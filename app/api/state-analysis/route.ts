@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
               eq(analysisResults.stateName, stateName),
               eq(analysisResults.analysisType, 'state_overview'),
               gt(analysisResults.createdAt, sevenDaysAgo),
-              isNull(analysisResults.expiresAt)
+              gt(analysisResults.expiresAt, new Date())
             )
           )
           .limit(1);

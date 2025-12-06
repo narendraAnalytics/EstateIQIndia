@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
               eq(analysisResults.userId, userId),
               eq(analysisResults.analysisType, 'property_valuation'),
               gt(analysisResults.createdAt, sevenDaysAgo),
-              isNull(analysisResults.expiresAt)
+              gt(analysisResults.expiresAt, new Date())
             )
           )
           .limit(1);
